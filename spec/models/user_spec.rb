@@ -11,7 +11,6 @@ RSpec.describe User, type: :model do
       user = User.new
       user.password = 'password'
       user.password_confirmation = 'anotherpassword'
-      binding.pry
 
       expect(user).to_not be_valid
       expect(user.errors[:password_confirmation]).to_not be_blank
