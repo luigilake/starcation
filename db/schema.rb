@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016203757) do
+ActiveRecord::Schema.define(version: 20171017150939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "celestials", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "photo"
+    t.integer "distance", null: false
+    t.string "type", null: false
+    t.integer "size", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_celestials_on_name", unique: true
+    t.index ["user_id"], name: "index_celestials_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "body", null: false
+    t.integer "votes", default: 0
+    t.string "photo"
+    t.integer "rating", default: 0
+    t.bigint "user_id"
+    t.bigint "celestial_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["celestial_id"], name: "index_reviews_on_celestial_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
