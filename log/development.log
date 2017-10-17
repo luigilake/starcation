@@ -895,3 +895,40 @@ Processing by Api::V1::CelestialsController#index as HTML
 Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 1.7ms)
 
 
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (15.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$11$C1ig52hdHMJp5juPCpiI1.Z8aehkYtoSdsAtFmIzJUz1qHa1A0p1u"], ["created_at", "2017-10-17 16:56:03.842769"], ["updated_at", "2017-10-17 16:56:03.842769"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCelestial Load (1.7ms)[0m  [1m[34mSELECT  "celestials".* FROM "celestials" ORDER BY "celestials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (3.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Started GET "/api/v1/celestials" for 127.0.0.1 at 2017-10-17 13:04:41 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (1.0ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 43ms (Views: 20.4ms | ActiveRecord: 11.9ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Load (0.8ms)[0m  [1m[34mSELECT  "celestials".* FROM "celestials" ORDER BY "celestials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Load (0.9ms)[0m  [1m[34mSELECT  "celestials".* FROM "celestials" ORDER BY "celestials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT  "celestials".* FROM "celestials" ORDER BY "celestials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT  "celestials".* FROM "celestials" WHERE "celestials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Load (1.0ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials" WHERE "celestials"."user_id" = $1[0m  [["user_id", 1]]
