@@ -4,5 +4,4 @@ class Review < ApplicationRecord
 
   validates :body, presence: true
   validates :rating, presence: true, inclusion: { in: [1..5] }
-  validates :photo, allow_nil: true
 end

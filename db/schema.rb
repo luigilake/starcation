@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20171017150939) do
     t.string "name", null: false
     t.string "photo"
     t.integer "distance", null: false
-    t.string "type", null: false
+    t.string "celestial_type", null: false
     t.integer "size", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false

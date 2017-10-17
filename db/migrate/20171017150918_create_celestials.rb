@@ -4,7 +4,7 @@ class CreateCelestials < ActiveRecord::Migration[5.1]
       t.string :name, null: false
       t.string :photo
       t.integer :distance, null:false
-      t.string :type, null:false
+      t.string :celestial_type, null:false
       t.integer :size, null:false
 
       t.belongs_to :user
