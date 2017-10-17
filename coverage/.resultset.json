@@ -46,6 +46,17 @@
         1,
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/luigidu/challenges/starcation/app/models/review.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/luigidu/challenges/starcation/app/channels/application_cable/channel.rb": [
@@ -76,17 +87,8 @@
         0,
         0,
         0
-      ],
-      "/Users/luigidu/challenges/starcation/app/models/review.rb": [
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1508260559
+    "timestamp": 1508263304
   }
 }

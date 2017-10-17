@@ -298,3 +298,1541 @@ Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms)
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$XV7P77qQUlae9.ZjTqogXehFxNw41o6/4JgOxy.up3EwNE6vWZ7tC"], ["created_at", "2017-10-17 17:42:12.165300"], ["updated_at", "2017-10-17 17:42:12.165300"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 12], ["created_at", "2017-10-17 17:42:12.206345"], ["updated_at", "2017-10-17 17:42:12.206345"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$AHG4bBHykPq/lFm6FCpVfOLxPjkmHikmD1HZTB5qnFBZJY3373hki"], ["created_at", "2017-10-17 17:42:12.227040"], ["updated_at", "2017-10-17 17:42:12.227040"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 13], ["created_at", "2017-10-17 17:42:12.231747"], ["updated_at", "2017-10-17 17:42:12.231747"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$jjBnaelLWUYM1TfByMiZLeGNTJqeSxGurWW2m8t.yysJH7AoeTqS2"], ["created_at", "2017-10-17 17:44:13.516877"], ["updated_at", "2017-10-17 17:44:13.516877"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 14], ["created_at", "2017-10-17 17:44:13.558219"], ["updated_at", "2017-10-17 17:44:13.558219"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$c/Hr.So6vQCCKjZ4STyV2.CFVAnOchw3P.rnuey4.RiRkS.fnq6OG"], ["created_at", "2017-10-17 17:44:13.583838"], ["updated_at", "2017-10-17 17:44:13.583838"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 15], ["created_at", "2017-10-17 17:44:13.589520"], ["updated_at", "2017-10-17 17:44:13.589520"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$qvHapr/a4fVXiY1jhSNuN.Vq1Q7f5pPSbDqtxjaoeEw2MiECUXDN6"], ["created_at", "2017-10-17 17:44:37.197655"], ["updated_at", "2017-10-17 17:44:37.197655"]]
+  [1m[35m (1.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 16], ["created_at", "2017-10-17 17:44:37.251636"], ["updated_at", "2017-10-17 17:44:37.251636"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$6sevX/umRYNHOwuVhcDGgub0GNjI9UYFnQqZxj55JPuwJ/XTNu3Va"], ["created_at", "2017-10-17 17:44:37.279488"], ["updated_at", "2017-10-17 17:44:37.279488"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 17], ["created_at", "2017-10-17 17:44:37.288206"], ["updated_at", "2017-10-17 17:44:37.288206"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$Y8Tojh4kTTSPZ/10lFBg/uMGpjgeV5h0P9baob6bm9rJ1EmpAqVse"], ["created_at", "2017-10-17 17:45:13.202226"], ["updated_at", "2017-10-17 17:45:13.202226"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 18], ["created_at", "2017-10-17 17:45:13.234816"], ["updated_at", "2017-10-17 17:45:13.234816"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$iU463q5VGkbRh85l7EOQEu2ufWAqUuEvVbo2eJBHPTJFjeaUYCYru"], ["created_at", "2017-10-17 17:45:13.254391"], ["updated_at", "2017-10-17 17:45:13.254391"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 19], ["created_at", "2017-10-17 17:45:13.259453"], ["updated_at", "2017-10-17 17:45:13.259453"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.4ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$KiCOsOCT3Alkmz9f8JsCwu8bNxDHBASHF8CcjuuzkyFT2qbC.ttEC"], ["created_at", "2017-10-17 17:45:32.578436"], ["updated_at", "2017-10-17 17:45:32.578436"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 20], ["created_at", "2017-10-17 17:45:32.610041"], ["updated_at", "2017-10-17 17:45:32.610041"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$QFuCEDJaYWubOiiUY2d.bu.CzYbgIIUqv6us0fx/ptvueaEOmpPFm"], ["created_at", "2017-10-17 17:45:32.629522"], ["updated_at", "2017-10-17 17:45:32.629522"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 21], ["created_at", "2017-10-17 17:45:32.634530"], ["updated_at", "2017-10-17 17:45:32.634530"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$RMc1asoZjzfk5j8nW0/eK.Pk1EUV57242b.Ge9eSzcprAp3zx5cV."], ["created_at", "2017-10-17 17:49:49.164969"], ["updated_at", "2017-10-17 17:49:49.164969"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 22], ["created_at", "2017-10-17 17:49:49.200740"], ["updated_at", "2017-10-17 17:49:49.200740"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$VIMssKirMx0Dajg5wmKQhurDj.D33Pwi8HFFZJK0c8gk1uJaySCqy"], ["created_at", "2017-10-17 17:49:49.221887"], ["updated_at", "2017-10-17 17:49:49.221887"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 23], ["created_at", "2017-10-17 17:49:49.227092"], ["updated_at", "2017-10-17 17:49:49.227092"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$zJzsKW8VvLkYIc0P7Qr6ruwyMWhwCZEEHLYAaffBwQDwNm/8gWJEO"], ["created_at", "2017-10-17 17:50:26.645008"], ["updated_at", "2017-10-17 17:50:26.645008"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 24], ["created_at", "2017-10-17 17:50:26.677360"], ["updated_at", "2017-10-17 17:50:26.677360"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$9AhGqNQNEPqlcLBoeI6ASevXpdQSDbq8WzbbCWm2sKJFjprheBRqm"], ["created_at", "2017-10-17 17:50:26.697117"], ["updated_at", "2017-10-17 17:50:26.697117"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 25], ["created_at", "2017-10-17 17:50:26.702248"], ["updated_at", "2017-10-17 17:50:26.702248"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$g1gl8Pgs8OxdK9DPgwhKcujTzASwSm6xoRawA.QJOsgb1Ku1SjgYe"], ["created_at", "2017-10-17 17:50:56.820250"], ["updated_at", "2017-10-17 17:50:56.820250"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 26], ["created_at", "2017-10-17 17:50:56.851898"], ["updated_at", "2017-10-17 17:50:56.851898"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$pirZHQHVrmJAXYe0KEq7seB4PaMjjakx5oAr.45fYZz7xfhwIym2G"], ["created_at", "2017-10-17 17:50:56.870878"], ["updated_at", "2017-10-17 17:50:56.870878"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 27], ["created_at", "2017-10-17 17:50:56.875746"], ["updated_at", "2017-10-17 17:50:56.875746"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.4ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$oA6.1UTSHVcicR/6Tpik6uA0JIdkld/1P56nQMlCw0vPzMFW9c4lW"], ["created_at", "2017-10-17 17:51:21.545531"], ["updated_at", "2017-10-17 17:51:21.545531"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 28], ["created_at", "2017-10-17 17:51:21.576853"], ["updated_at", "2017-10-17 17:51:21.576853"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$IgAcNAg8I2XrA.kLD9U70O2x40qlo3GwBfHSEOiHPGQOOvkNrE9Tq"], ["created_at", "2017-10-17 17:51:21.596388"], ["updated_at", "2017-10-17 17:51:21.596388"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 29], ["created_at", "2017-10-17 17:51:21.601487"], ["updated_at", "2017-10-17 17:51:21.601487"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$jqg5ku4dBtnrMkH3TRIkVOqO/Q1/paiULcvigZBtLl.bqDiamyeVG"], ["created_at", "2017-10-17 17:52:47.445793"], ["updated_at", "2017-10-17 17:52:47.445793"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 30], ["created_at", "2017-10-17 17:52:47.478888"], ["updated_at", "2017-10-17 17:52:47.478888"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$grTieKgtDNjEWlikuXsd1OYcUexRUVGDhjKO5diEeBi32ohSJYIpi"], ["created_at", "2017-10-17 17:52:47.499909"], ["updated_at", "2017-10-17 17:52:47.499909"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 31], ["created_at", "2017-10-17 17:52:47.505371"], ["updated_at", "2017-10-17 17:52:47.505371"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$3s9EKT7Djx4b8JPYfEsmEO8oJUYtVPFv3PMmcoKaW/Vfi84KcykRa"], ["created_at", "2017-10-17 17:55:05.255477"], ["updated_at", "2017-10-17 17:55:05.255477"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 32], ["created_at", "2017-10-17 17:55:05.287789"], ["updated_at", "2017-10-17 17:55:05.287789"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$h35hhLjhUcOsdlaWvQivxOSG0LCFTP6UcMVd621J8zBvd4F8zO/iC"], ["created_at", "2017-10-17 17:55:05.308412"], ["updated_at", "2017-10-17 17:55:05.308412"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 33], ["created_at", "2017-10-17 17:55:05.313429"], ["updated_at", "2017-10-17 17:55:05.313429"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$28enYaJEUigo5jNFzH.Hbu2Ms9p8UwO1iT0PopfeF/KlBJzaeLsLG"], ["created_at", "2017-10-17 17:55:38.871370"], ["updated_at", "2017-10-17 17:55:38.871370"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 34], ["created_at", "2017-10-17 17:55:38.903565"], ["updated_at", "2017-10-17 17:55:38.903565"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$z6fD0y8T.hADcqB3FAZzY.bkRCngerp5A9AqeSchJUQrLb4IsS05K"], ["created_at", "2017-10-17 17:55:38.922798"], ["updated_at", "2017-10-17 17:55:38.922798"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 35], ["created_at", "2017-10-17 17:55:38.928080"], ["updated_at", "2017-10-17 17:55:38.928080"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$RSypN.DmcDRefl809PM0Ee6NkRD5iI3Jm28F848KWXvH5RzI3.wzi"], ["created_at", "2017-10-17 17:56:14.159545"], ["updated_at", "2017-10-17 17:56:14.159545"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 36], ["created_at", "2017-10-17 17:56:14.191586"], ["updated_at", "2017-10-17 17:56:14.191586"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$c5ku4ICT9lXcMU7IswxuwexBCEiME8le5Ub9LhSw4WRu8Y1YN9xFW"], ["created_at", "2017-10-17 17:56:14.212476"], ["updated_at", "2017-10-17 17:56:14.212476"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 37], ["created_at", "2017-10-17 17:56:14.217467"], ["updated_at", "2017-10-17 17:56:14.217467"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.4ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$mAoNSdWH/GIf/.lxgZ50deTizeWpRWHz7MLxdWPhZwaG0JUujlpOG"], ["created_at", "2017-10-17 17:57:06.081504"], ["updated_at", "2017-10-17 17:57:06.081504"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 38], ["created_at", "2017-10-17 17:57:06.128285"], ["updated_at", "2017-10-17 17:57:06.128285"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$F05.BL1NrM60Unl0DXgW2OQQvJQ68QSU3BPVL4eZQOgAeUlgyCRii"], ["created_at", "2017-10-17 17:57:06.153468"], ["updated_at", "2017-10-17 17:57:06.153468"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 39], ["created_at", "2017-10-17 17:57:06.161361"], ["updated_at", "2017-10-17 17:57:06.161361"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$SOgAW47TIobwbx.OtRfTse3e5bCg86T7lmDbA0C5iARvfS0.vu5/K"], ["created_at", "2017-10-17 17:57:56.192463"], ["updated_at", "2017-10-17 17:57:56.192463"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 40], ["created_at", "2017-10-17 17:57:56.225353"], ["updated_at", "2017-10-17 17:57:56.225353"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$DcK6Hy0H5XGQsZEu1LmA.u7EufsNSi7MYeDOLJ/wZDKUZCFVKUera"], ["created_at", "2017-10-17 17:57:56.245106"], ["updated_at", "2017-10-17 17:57:56.245106"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 41], ["created_at", "2017-10-17 17:57:56.250313"], ["updated_at", "2017-10-17 17:57:56.250313"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$xFx7yJ/vMCVZ25qaTBBMxucqkUiZNvIOvw5j/GgFbv5SSVdni83NC"], ["created_at", "2017-10-17 17:59:12.949646"], ["updated_at", "2017-10-17 17:59:12.949646"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 42], ["created_at", "2017-10-17 17:59:12.982382"], ["updated_at", "2017-10-17 17:59:12.982382"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$msPynLqCXfksheayt0cdpuy1RMLW4G1sh7ny2mb/faS2cZFJ7srvK"], ["created_at", "2017-10-17 17:59:13.001735"], ["updated_at", "2017-10-17 17:59:13.001735"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 43], ["created_at", "2017-10-17 17:59:13.006637"], ["updated_at", "2017-10-17 17:59:13.006637"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.4ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$pv0QU3YzFOvP5K2.Vr8afuUUnr0hMj6OpYrA3EVSxrzXETHotFdxe"], ["created_at", "2017-10-17 18:00:19.913986"], ["updated_at", "2017-10-17 18:00:19.913986"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 44], ["created_at", "2017-10-17 18:00:19.954429"], ["updated_at", "2017-10-17 18:00:19.954429"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$TpUOBz0dl1OUJGo8xyIi3u06JsJ.f8uw8Be2UIpN1gjExAi.bSYBW"], ["created_at", "2017-10-17 18:00:19.976801"], ["updated_at", "2017-10-17 18:00:19.976801"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 45], ["created_at", "2017-10-17 18:00:19.982406"], ["updated_at", "2017-10-17 18:00:19.982406"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$1PzeeYZ.2DeCMCJFbT2pJOMx..GsUlpdnbUXQSR8NlrUQ6zNaDwc."], ["created_at", "2017-10-17 18:00:54.201886"], ["updated_at", "2017-10-17 18:00:54.201886"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 46], ["created_at", "2017-10-17 18:00:54.237610"], ["updated_at", "2017-10-17 18:00:54.237610"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.8ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$gaFju6sApbTNDNFK.l32qeLcQvg30LkE69Feh.6H5KD4v11Pvu2jm"], ["created_at", "2017-10-17 18:00:54.260153"], ["updated_at", "2017-10-17 18:00:54.260153"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 47], ["created_at", "2017-10-17 18:00:54.266095"], ["updated_at", "2017-10-17 18:00:54.266095"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$DUbs/iYniKUZ24L/.15JPOXA2P/t0zjmnoKinzQH3OrQh0ioyACh6"], ["created_at", "2017-10-17 18:01:13.279685"], ["updated_at", "2017-10-17 18:01:13.279685"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 48], ["created_at", "2017-10-17 18:01:13.311629"], ["updated_at", "2017-10-17 18:01:13.311629"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.5ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$9LRy012uoiNgoC6dKtpp4.xrkooUc1TqvV5ZjDRZ9SSqDsKxeeiZu"], ["created_at", "2017-10-17 18:01:13.333609"], ["updated_at", "2017-10-17 18:01:13.333609"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 49], ["created_at", "2017-10-17 18:01:13.339282"], ["updated_at", "2017-10-17 18:01:13.339282"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.6ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$fOpvGKAtKmEQRcWrscjJI.j6XjJedWSoNhvQHL/o04FiG52DXu/ga"], ["created_at", "2017-10-17 18:01:44.046213"], ["updated_at", "2017-10-17 18:01:44.046213"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 50], ["created_at", "2017-10-17 18:01:44.090675"], ["updated_at", "2017-10-17 18:01:44.090675"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$04$Z6HCtgjU0Ibe7nZVuu9tPOBCVxXizPCQ/zqFLuniA1DInTPZZD5a2"], ["created_at", "2017-10-17 18:01:44.115121"], ["updated_at", "2017-10-17 18:01:44.115121"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Planet1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "celestials" ("name", "distance", "celestial_type", "size", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Planet1"], ["distance", 1], ["celestial_type", "planet"], ["size", 2], ["user_id", 51], ["created_at", "2017-10-17 18:01:44.121735"], ["updated_at", "2017-10-17 18:01:44.121735"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CelestialsController#index as HTML
+  [1m[36mCelestial Load (0.7ms)[0m  [1m[34mSELECT "celestials".* FROM "celestials"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", "Andromeda"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCelestial Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCelestial Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "celestials" WHERE "celestials"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
