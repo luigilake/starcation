@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/luigidu/challenges/starcation/app/models/user.rb": [
+      "/Users/Nate/challenges/starcation/app/models/user.rb": [
         1,
         1,
         1,
@@ -18,16 +18,16 @@
         null,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/models/application_record.rb": [
+      "/Users/Nate/challenges/starcation/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/helpers/application_helper.rb": [
+      "/Users/Nate/challenges/starcation/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/controllers/api/v1/celestials_controller.rb": [
+      "/Users/Nate/challenges/starcation/app/controllers/api/v1/celestials_controller.rb": [
         1,
         1,
         2,
@@ -39,12 +39,12 @@
         null,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/controllers/application_controller.rb": [
+      "/Users/Nate/challenges/starcation/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/models/celestial.rb": [
+      "/Users/Nate/challenges/starcation/app/models/celestial.rb": [
         1,
         1,
         1,
@@ -56,7 +56,7 @@
         1,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/models/review.rb": [
+      "/Users/Nate/challenges/starcation/app/models/review.rb": [
         1,
         1,
         1,
@@ -66,36 +66,36 @@
         1,
         null
       ],
-      "/Users/luigidu/challenges/starcation/app/channels/application_cable/channel.rb": [
+      "/Users/Nate/challenges/starcation/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/luigidu/challenges/starcation/app/channels/application_cable/connection.rb": [
+      "/Users/Nate/challenges/starcation/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/luigidu/challenges/starcation/app/controllers/static_pages_controller.rb": [
+      "/Users/Nate/challenges/starcation/app/controllers/static_pages_controller.rb": [
         0,
         0,
         0,
         0,
         0
       ],
-      "/Users/luigidu/challenges/starcation/app/jobs/application_job.rb": [
+      "/Users/Nate/challenges/starcation/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/Users/luigidu/challenges/starcation/app/mailers/application_mailer.rb": [
+      "/Users/Nate/challenges/starcation/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1508266339
+    "timestamp": 1508273454
   }
 }
