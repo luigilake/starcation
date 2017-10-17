@@ -1,0 +1,10 @@
+class Celestial < ApplicationRecord
+  belongs_to :user
+  has_many :reviews
+
+  validates :name, presence: true, uniqueness: true
+  validates :photo, allow_nil: true
+  validates :distance, presence: true
+  validates :type, presence: true, inclusion: { in: ['star', 'planet', 'satellite', 'comet', 'galaxy', 'asteroid', 'constellation', 'other']}
+  validates :size, presence: true
+end
