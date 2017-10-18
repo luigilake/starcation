@@ -1,32 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Nate/challenges/starcation/app/models/user.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Nate/challenges/starcation/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/Nate/challenges/starcation/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
       "/Users/Nate/challenges/starcation/app/controllers/api/v1/celestials_controller.rb": [
         1,
         1,
@@ -42,6 +16,14 @@
       "/Users/Nate/challenges/starcation/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        9,
+        null,
         null
       ],
       "/Users/Nate/challenges/starcation/app/models/celestial.rb": [
@@ -66,6 +48,13 @@
         1,
         null
       ],
+      "/Users/Nate/challenges/starcation/app/controllers/static_pages_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Nate/challenges/starcation/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -78,10 +67,7 @@
         0,
         0
       ],
-      "/Users/Nate/challenges/starcation/app/controllers/static_pages_controller.rb": [
-        0,
-        0,
-        0,
+      "/Users/Nate/challenges/starcation/app/helpers/application_helper.rb": [
         0,
         0
       ],
@@ -94,8 +80,30 @@
         0,
         0,
         0
+      ],
+      "/Users/Nate/challenges/starcation/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/Nate/challenges/starcation/app/models/user.rb": [
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0
       ]
     },
-    "timestamp": 1508273454
+    "timestamp": 1508336841
   }
 }
