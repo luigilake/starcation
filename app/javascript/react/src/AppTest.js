@@ -1,16 +1,43 @@
-import App from '../../src/App';
+import App from './App';
+import IndexPage from './components/IndexPage';
 import React from 'react'
 import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
+import Celestial from './components/Celestial';
 
-describe('A test for App', () => {
-  let wrapper;
+describe('Celestial', () => {
+  let wrapper,
+  name,
+  type;
 
   beforeEach(() => {
-    wrapper = mount(<App />)
+    wrapper = mount(
+      <Celestial
+      name='Andromeda'
+      type='galaxy' />
+    )
+  });
+
+  it('should render an h1 tag', () => {
+    expect(wrapper.find('h1').text()).toBe('Andromeda')
   })
 
-  it('should pass', () => {
-    expect(wrapper.find('h1').text()).toEqual("Hello World")
+  it('should render an p tag', () => {
+    expect(wrapper.find('p').text()).toBe('galaxy')
+  })
+
+  it('should render an h5 tag', () => {
+    expect(wrapper.find('h5').text()).toBe('Rating: haha')
   })
 })
+
+
+// let wrapper;
+//
+// beforeEach(() => {
+//   wrapper = mount(<App />)
+// })
+//
+// it('should pass', () => {
+//   expect(wrapper.find('h1').text()).toEqual("Data Goes Here")
+// })
