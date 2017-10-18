@@ -11,7 +11,6 @@ class IndexPage extends Component{
   }
 
   componentDidMount(){
-    let that = this
     fetch('/api/v1/celestials')
       .then(response => {
         if (response.ok) {
@@ -24,7 +23,7 @@ class IndexPage extends Component{
       })
       .then(response => response.json())
       .then(body => {
-        that.setState({celestials_array: body})
+        this.setState({celestials_array: body})
       })
   }
 

@@ -30,14 +30,3 @@ describe('Celestial', () => {
     expect(wrapper.find('h5').text()).toBe('Rating: haha')
   })
 })
-
-
-// let wrapper;
-//
-// beforeEach(() => {
-//   wrapper = mount(<App />)
-// })
-//
-// it('should pass', () => {
-//   expect(wrapper.find('h1').text()).toEqual("Data Goes Here")
-// })
