@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router'
-import CelestialTile from '../components/CelestialTile'
 
 class ShowPage extends Component{
   constructor(props){
