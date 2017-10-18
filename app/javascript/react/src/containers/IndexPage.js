@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router'
-import Celestial from './Celestial'
+import CelestialTile from '../components/CelestialTile'
 
 class IndexPage extends Component{
   constructor(props){
@@ -25,13 +25,15 @@ class IndexPage extends Component{
       .then(body => {
         this.setState({celestials_array: body})
       })
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+
   }
 
   render() {
 
     let celestials = this.state.celestials_array.map(celestial =>{
       return(
-        <Celestial
+        <CelestialTile
           key = {celestial.id}
           id = {celestial.id}
           name = {celestial.name}
