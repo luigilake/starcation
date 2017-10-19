@@ -7,7 +7,8 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
-gem 'fog-aws'
+gem 'carrierwave', '~>1.0'
+gem 'fog'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'dotenv-rails'
 end
 
 group :production do
