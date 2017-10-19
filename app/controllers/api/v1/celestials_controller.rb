@@ -7,6 +7,13 @@ class Api::V1::CelestialsController < ApplicationController
     @id = params[:id]
     celestial = Celestial.find(@id)
     reviews = celestial.reviews
-    render json: {celestial: celestial, reviews: reviews}
+    review_info = reviews.map do |review|
+       {
+          creator: review.user.username,
+          content: review
+        }
+    end
+    cuser = current_user
+    render json: {celestial: celestial, current_user: current_user, reviews: review_info}
   end
 end

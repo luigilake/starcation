@@ -7,6 +7,7 @@ const ReviewTile = props => {
         IMAGE
       </div>
       <div className="review-info">
+        <p className="review-creator">{props.user}</p>
         <p className="review-body">{props.body}</p>
         <p className="review-rating">Rating: {props.rating}</p>
         <p className="review-votes">Votes: {props.votes}</p>
