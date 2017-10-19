@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
 import React, {Component} from 'react';
+import ReviewIndex from './ReviewIndex'
 
 class ShowPage extends Component{
   constructor(props){
@@ -23,14 +23,12 @@ class ShowPage extends Component{
       })
       .then(response => response.json())
       .then(response => {
-        this.setState({ celestial: response})
+        this.setState({ celestial: response.celestial})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
-
   }
 
   render() {
-    console.log(this.state)
 
     return (
       <div>
@@ -49,7 +47,9 @@ class ShowPage extends Component{
           </ul>
         </div>
         <div className="review-index">
-          <h3>Reviews:</h3>
+          <ReviewIndex
+            id={this.props.params.id}
+          />
         </div>
       </div>
     )
