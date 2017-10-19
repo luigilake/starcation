@@ -5,6 +5,8 @@ class Api::V1::CelestialsController < ApplicationController
 
   def show
     @id = params[:id]
-    render json: Celestial.find(@id)
+    celestial = Celestial.find(@id)
+    reviews = celestial.reviews
+    render json: {celestial: celestial, reviews: reviews}
   end
 end
