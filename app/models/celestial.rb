@@ -7,4 +7,6 @@ class Celestial < ApplicationRecord
   validates :celestial_type, presence: true, inclusion: { in: ['star', 'planet', 'satellite', 'comet', 'galaxy', 'asteroid', 'constellation', 'other']}
   validates :size, presence: true
   validates :user_id, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end

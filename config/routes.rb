@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :celestials, only: [:new, :create]
+
   get '*path', to: 'static_pages#index'
 
 end
