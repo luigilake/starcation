@@ -25,7 +25,8 @@ class ReviewFormContainer extends Component {
     } else {
       let formPayload = {
         body: this.state.reviewBody,
-        rating: this.state.rating
+        rating: this.state.rating,
+        celestial_id: this.props.celestial_id
       }
       this.props.addNewReview(formPayload);
     }

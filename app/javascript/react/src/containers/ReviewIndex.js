@@ -7,7 +7,7 @@ class ReviewIndex extends Component {
     super(props)
     this.state = {
       reviews: [],
-      current_user: {}
+      haha: false
     }
     this.addNewReview = this.addNewReview.bind(this)
   }
@@ -34,6 +34,7 @@ class ReviewIndex extends Component {
 
   addNewReview(formPayload){
     let id = this.props.id
+
     fetch(`/api/v1/celestials/${id}/reviews`, {
       credentials: 'same-origin',
       headers: {
@@ -45,6 +46,7 @@ class ReviewIndex extends Component {
         review: formPayload
       })
     })
+    .then(this.forceUpdate())
   }
 
   render(){
@@ -56,6 +58,7 @@ class ReviewIndex extends Component {
             rating={review.content.rating}
             votes={review.content.votes}
             user={review.creator}
+            celestial_id={this.props.id}
           />
       )
     })

@@ -13,7 +13,6 @@ class Api::V1::CelestialsController < ApplicationController
           content: review
         }
     end
-    cuser = current_user
-    render json: {celestial: celestial, current_user: current_user, reviews: review_info}
+    render json: {celestial: celestial, reviews: review_info}
   end
 end
