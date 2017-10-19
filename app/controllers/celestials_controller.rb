@@ -2,6 +2,10 @@ class CelestialsController < ApplicationController
   def new
     @celestial = Celestial.new
 
+    @array_of_types = ['star', 'planet', 'satellite', 'comet', 'galaxy', 'asteroid', 'constellation', 'other'].map do |celestial|
+      [celestial, celestial]
+    end
+
   end
 
   def create
@@ -21,6 +25,6 @@ class CelestialsController < ApplicationController
   private
 
   def celestial_params
-    params.require(:celestial).permit(:name, :distance, :celestial_type, :size)
+    params.require(:celestial).permit(:name, :distance, :celestial_type, :size, :photo)
   end
 end

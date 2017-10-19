@@ -16,7 +16,7 @@
   </div>
   <div>
     <%= f.label :celestial_type %>
-    <%= f.text_field :celestial_type %>
+    <%= f.collection_select(:celestial_type, @array_of_types, :last, :first) %>
   </div>
   <div>
     <%= f.label :size %>
@@ -24,10 +24,10 @@
   </div>
 
   <div>
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
   </div>
-  
+
   <div>
     <%= f.button "Add Celestial" %>
   </div>
