@@ -2,26 +2,12 @@ class CelestialsController < ApplicationController
   def new
     @celestial = Celestial.new
 
-    @array_of_types = [['star', 'Star'],
-                       ['planet', 'Planet'],
-                       ['satellite', 'Satellite'],
-                       ['comet', 'Comet'],
-                       ['galaxy', 'Galaxy'],
-                       ['asteroid', 'Asteroid'],
-                       ['constellation', 'Constellation'],
-                       ['other', 'Other']]
+    @array_of_types = CelestialTypes::TYPES
 
   end
 
   def create
-    @array_of_types = [['star', 'Star'],
-                       ['planet', 'Planet'],
-                       ['satellite', 'Satellite'],
-                       ['comet', 'Comet'],
-                       ['galaxy', 'Galaxy'],
-                       ['asteroid', 'Asteroid'],
-                       ['constellation', 'Constellation'],
-                       ['other', 'Other']]
+    @array_of_types = CelestialTypes::TYPES
 
     @celestial = Celestial.new(celestial_params)
 
