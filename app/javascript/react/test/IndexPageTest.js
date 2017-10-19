@@ -1,9 +1,9 @@
-import App from './App';
-import IndexPage from './components/IndexPage';
+import App from '../src/App';
+import IndexPage from '../src/containers/IndexPage';
 import React from 'react'
 import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
-import Celestial from './components/Celestial';
+import CelestialTile from '../src/components/CelestialTile';
 
 describe('Celestial', () => {
   let wrapper,
@@ -12,7 +12,7 @@ describe('Celestial', () => {
 
   beforeEach(() => {
     wrapper = mount(
-      <Celestial
+      <CelestialTile
       name='Andromeda'
       type='galaxy' />
     )
