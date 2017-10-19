@@ -2,16 +2,31 @@ class CelestialsController < ApplicationController
   def new
     @celestial = Celestial.new
 
-    @array_of_types = ['star', 'planet', 'satellite', 'comet', 'galaxy', 'asteroid', 'constellation', 'other'].map do |celestial|
-      [celestial, celestial]
-    end
+    @array_of_types = [['star', 'Star'],
+                       ['planet', 'Planet'],
+                       ['satellite', 'Satellite'],
+                       ['comet', 'Comet'],
+                       ['galaxy', 'Galaxy'],
+                       ['asteroid', 'Asteroid'],
+                       ['constellation', 'Constellation'],
+                       ['other', 'Other']]
 
   end
 
   def create
+    @array_of_types = [['star', 'Star'],
+                       ['planet', 'Planet'],
+                       ['satellite', 'Satellite'],
+                       ['comet', 'Comet'],
+                       ['galaxy', 'Galaxy'],
+                       ['asteroid', 'Asteroid'],
+                       ['constellation', 'Constellation'],
+                       ['other', 'Other']]
+
     @celestial = Celestial.new(celestial_params)
 
     @celestial.user_id = current_user.id
+    # @celestial.user_id = 1
 
     if @celestial.save
       flash[:notice] = 'Celestial saved successfully'
