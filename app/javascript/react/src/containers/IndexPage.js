@@ -40,12 +40,14 @@ class IndexPage extends Component{
           type = {celestial.celestial_type}
           distance = {celestial.distance}
           size = {celestial.size}
+          photo = {celestial.photo}
         />
       )
     })
 
     return (
       <div>
+        <a href = '/celestials/new'>Add a new celestial</a>
         <h1>{celestials}</h1>
       </div>
     )

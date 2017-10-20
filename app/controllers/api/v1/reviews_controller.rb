@@ -12,6 +12,7 @@ class Api::V1::ReviewsController < ApplicationController
     review.celestial_id = params["celestial_id"]
     review.user = current_user
     review.save
+
   end
 
   private
