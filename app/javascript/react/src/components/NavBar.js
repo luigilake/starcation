@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 const NavBar = props => {
   return(
-    <div>
+    <div className='navbar'>
       <Link to='/'>Destinations</Link>
       <a href="/users/sign_in">sign in</a>
       <a href="/users/edit">Edit user account</a>
