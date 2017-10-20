@@ -5,7 +5,8 @@ class ShowPage extends Component{
   constructor(props){
     super(props)
     this.state = {
-      celestial: {}
+      celestial: {},
+      status: false
     }
   }
 
@@ -23,13 +24,13 @@ class ShowPage extends Component{
       })
       .then(response => response.json())
       .then(response => {
-        this.setState({ celestial: response.celestial})
+        console.log(response)
+        this.setState({ celestial: response.celestial, status: response.stat})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render() {
-
     return (
       <div>
         <div className="showpage-photo">

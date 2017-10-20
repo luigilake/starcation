@@ -34,7 +34,6 @@ class ReviewIndex extends Component {
 
   addNewReview(formPayload){
     let id = this.props.id
-
     fetch(`/api/v1/celestials/${id}/reviews`, {
       credentials: 'same-origin',
       headers: {
