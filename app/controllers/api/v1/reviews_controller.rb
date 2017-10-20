@@ -6,18 +6,19 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def create
+    celestial = Celestial.find(params["review"]["celestial_id"])
     review = Review.new
     review.body = params["review"]["body"]
     review.rating = params["review"]["rating"]
-    review.celestial_id = params["celestial_id"]
+    review.celestial = celestial
     review.user = current_user
     review.save
-
+    render json: review
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:body, :rating)
+    params.require(:review).permit(:body, :rating, :celestial_id, :user_id)
   end
 end

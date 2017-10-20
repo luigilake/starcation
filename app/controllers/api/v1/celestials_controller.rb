@@ -1,5 +1,6 @@
 class Api::V1::CelestialsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  protect_from_forgery unless: -> { request.format.json? }
 
   def index
     render json: Celestial.all
@@ -11,14 +12,17 @@ class Api::V1::CelestialsController < ApplicationController
     reviews = celestial.reviews
     review_info = reviews.map do |review|
        {
-          creator: review.user.username,
-          content: review
+          id: review.id,
+          body: review.body,
+          rating: review.rating,
+          votes: review.votes,
+          photo: review.photo,
+          user: review.user,
+          celestial: review.celestial,
+          created_at: review.created_at,
+          updated_at: review.updated_at
         }
     end
-    signed_in = false
-    if current_user
-      signed_in = true
-    end
-    render json: {celestial: celestial, stat: signed_in, reviews: review_info}
+    render json: {celestial: celestial, current_user: current_user, reviews: review_info}
   end
 end

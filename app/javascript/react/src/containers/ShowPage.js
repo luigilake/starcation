@@ -24,7 +24,6 @@ class ShowPage extends Component{
       })
       .then(response => response.json())
       .then(response => {
-        console.log(response)
         this.setState({ celestial: response.celestial, photo: response.celestial.photo.url})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -51,6 +50,7 @@ class ShowPage extends Component{
         <div className="review-index">
           <ReviewIndex
             id={this.props.params.id}
+            celestial={celestial}
           />
         </div>
       </div>

@@ -5,17 +5,24 @@ class ReviewFormContainer extends Component {
     super(props)
     this.state = {
       reviewBody: '',
-      rating: 0,
-      votes: 0
+      rating: 0
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.clearForm = this.clearForm.bind(this)
   }
 
   handleChange(event){
     let value = event.target.value
     let name = event.target.name
     this.setState({ [name]: value})
+  }
+
+  clearForm(){
+    this.setState({
+      reviewBody: '',
+      rating: 0
+    })
   }
 
   handleSubmit(event){
@@ -26,9 +33,10 @@ class ReviewFormContainer extends Component {
       let formPayload = {
         body: this.state.reviewBody,
         rating: this.state.rating,
-        celestial_id: this.props.celestial_id
+        celestial_id: this.props.celestial.id,
       }
       this.props.addNewReview(formPayload);
+      this.clearForm();
     }
   }
 
@@ -45,6 +53,7 @@ class ReviewFormContainer extends Component {
         </label>
         <label>Rating:
           <select name="rating" value={this.state.rating} onChange={this.handleChange}>
+            <option value={0}> </option>
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>

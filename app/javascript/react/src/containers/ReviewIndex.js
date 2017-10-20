@@ -7,14 +7,18 @@ class ReviewIndex extends Component {
     super(props)
     this.state = {
       reviews: [],
-      haha: false
+      current_user: {}
     }
     this.addNewReview = this.addNewReview.bind(this)
   }
 
   componentDidMount(){
     let id = this.props.id
-    fetch(`http://localhost:3000/api/v1/celestials/${id}`)
+    fetch(`http://localhost:3000/api/v1/celestials/${id}.json`,{
+      credentials: 'same-origin',
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json'}
+    })
       .then(response => {
         if (response.ok) {
           return response;
@@ -27,12 +31,13 @@ class ReviewIndex extends Component {
       .then(response => response.json())
       .then(response => {
         console.log(response)
-        this.setState({ reviews: response.reviews })
+        this.setState({ reviews: response.reviews, current_user: response.current_user })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   addNewReview(formPayload){
+    let that = this
     let id = this.props.id
     fetch(`/api/v1/celestials/${id}/reviews`, {
       credentials: 'same-origin',
@@ -41,22 +46,25 @@ class ReviewIndex extends Component {
         'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({
-        review: formPayload
-      })
+      body: JSON.stringify({ review: formPayload })
     })
-    .then(this.forceUpdate())
+    .then(response => response.json())
+    .then(body => {
+      debugger;
+      // FIX THIS PART. BODY NEEDS TO HAVE CELESTIAL AND USER DATA AVAILABLE!!!!
+      that.setState({ reviews: that.state.reviews.concat(body)})
+    })
   }
 
   render(){
     let reviews = this.state.reviews.map( review => {
       return(
           <ReviewTile
-            key={review.content.id}
-            body={review.content.body}
-            rating={review.content.rating}
-            votes={review.content.votes}
-            user={review.creator}
+            key={review.id}
+            body={review.body}
+            rating={review.rating}
+            votes={review.votes}
+            user={review.user.username}
             celestial_id={this.props.id}
           />
       )
@@ -67,6 +75,8 @@ class ReviewIndex extends Component {
         <h3>Reviews</h3>
         <ReviewFormContainer
           addNewReview={this.addNewReview}
+          current_user={this.state.current_user}
+          celestial={this.props.celestial}
         />
         {reviews}
       </div>
