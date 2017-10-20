@@ -6,7 +6,7 @@ class ShowPage extends Component{
     super(props)
     this.state = {
       celestial: {},
-      status: false
+      photo: ''
     }
   }
 
@@ -25,26 +25,27 @@ class ShowPage extends Component{
       .then(response => response.json())
       .then(response => {
         console.log(response)
-        this.setState({ celestial: response.celestial, status: response.stat})
+        this.setState({ celestial: response.celestial, photo: response.celestial.photo.url})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render() {
+    let celestial = this.state.celestial
     return (
       <div>
         <div className="showpage-photo">
-          IMAGE
+          <img src={this.state.photo} alt={`Photo of ${celestial.name}`}></img>
         </div>
         <div className="showpage-title">
-          <h1>{this.state.celestial.name}</h1>
+          <h1>{celestial.name}</h1>
         </div>
         <div className="showpage-info">
           <h3>Details:</h3>
           <ul>
-            <li>Type: {this.state.celestial.celestial_type}</li>
-            <li>Size: {this.state.celestial.size}</li>
-            <li>Distance: {this.state.celestial.distance} lightyears from Earth</li>
+            <li>Type: {celestial.celestial_type}</li>
+            <li>Size: {celestial.size}</li>
+            <li>Distance: {celestial.distance} lightyears from Earth</li>
           </ul>
         </div>
         <div className="review-index">

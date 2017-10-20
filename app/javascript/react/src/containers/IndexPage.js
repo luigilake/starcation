@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import CelestialTile from '../components/CelestialTile'
+import FilterButton from '../components/FilterButton'
 
 class IndexPage extends Component{
   constructor(props){
     super(props)
     this.state = {
-      celestials_array: []
+      celestialsArray: [],
+      celestialTypes: ['', 'galaxy', 'constellation', 'star', 'planet', 'satellite', 'comet', 'asteroid', 'other'],
+      selected_type: ''
     }
+    this.handleChangeDisplay = this.handleChangeDisplay.bind(this);
   }
 
   componentDidMount(){
@@ -23,30 +27,65 @@ class IndexPage extends Component{
       })
       .then(response => response.json())
       .then(body => {
-        this.setState({celestials_array: body})
+        this.setState({celestialsArray: body})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
 
+  handleChangeDisplay(celestial_type){
+    this.setState({selected_type: celestial_type})
   }
 
   render() {
+    console.log(this.state.selected_type)
+    let celestials = this.state.celestialsArray.map(celestial =>{
+      if(this.state.selected_type == ''){
+        return(
+          <CelestialTile
+            key = {celestial.id}
+            id = {celestial.id}
+            name = {celestial.name}
+            type = {celestial.celestial_type}
+            distance = {celestial.distance}
+            size = {celestial.size}
+            photo = {celestial.photo}
+          />
+        )
+      } else if (this.state.selected_type == celestial.celestial_type){
+        return(
+          <CelestialTile
+            key = {celestial.id}
+            id = {celestial.id}
+            name = {celestial.name}
+            type = {celestial.celestial_type}
+            distance = {celestial.distance}
+            size = {celestial.size}
+            photo = {celestial.photo}
+          />
+        )
+      }
+    })
 
-    let celestials = this.state.celestials_array.map(celestial =>{
+    let filterButtons = this.state.celestialTypes.map(type => {
+      let handleClick = () => {
+        this.handleChangeDisplay(type)
+      }
+
       return(
-        <CelestialTile
-          key = {celestial.id}
-          id = {celestial.id}
-          name = {celestial.name}
-          type = {celestial.celestial_type}
-          distance = {celestial.distance}
-          size = {celestial.size}
-          photo = {celestial.photo}
+        <FilterButton
+          key={this.state.celestialTypes.indexOf(type) + 1}
+          label={type}
+          handleClick={handleClick}
         />
       )
     })
 
+
     return (
       <div>
+        <div className="index-page-organization">
+          {filterButtons}
+        </div>
         <a href = '/celestials/new'>Add a new celestial</a>
         <h1>{celestials}</h1>
       </div>
