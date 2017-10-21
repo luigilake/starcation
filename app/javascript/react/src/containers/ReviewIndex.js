@@ -30,7 +30,6 @@ class ReviewIndex extends Component {
       })
       .then(response => response.json())
       .then(response => {
-        console.log(response)
         this.setState({ reviews: response.reviews, current_user: response.current_user })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -50,7 +49,6 @@ class ReviewIndex extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      debugger;
       // FIX THIS PART. BODY NEEDS TO HAVE CELESTIAL AND USER DATA AVAILABLE!!!!
       that.setState({ reviews: that.state.reviews.concat(body)})
     })

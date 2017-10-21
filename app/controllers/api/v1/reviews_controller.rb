@@ -13,7 +13,18 @@ class Api::V1::ReviewsController < ApplicationController
     review.celestial = celestial
     review.user = current_user
     review.save
-    render json: review
+    review_object = {
+      id: review.id,
+      body: review.body,
+      rating: review.rating,
+      votes: 0,
+      celestial: celestial,
+      user: current_user,
+      created_at: review.created_at,
+      updated_at: review.updated_at
+    }
+
+    render json: review_object
   end
 
   private
