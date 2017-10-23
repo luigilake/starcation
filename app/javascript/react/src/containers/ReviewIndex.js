@@ -30,6 +30,7 @@ class ReviewIndex extends Component {
       })
       .then(response => response.json())
       .then(response => {
+        debugger;
         this.setState({ reviews: response.reviews, current_user: response.current_user })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
