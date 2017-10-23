@@ -49,7 +49,6 @@ class ReviewIndex extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      // FIX THIS PART. BODY NEEDS TO HAVE CELESTIAL AND USER DATA AVAILABLE!!!!
       that.setState({ reviews: that.state.reviews.concat(body)})
     })
   }
