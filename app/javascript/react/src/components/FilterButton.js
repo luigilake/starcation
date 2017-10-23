@@ -8,7 +8,7 @@ const FilterButton = props => {
     label = props.label.charAt(0).toUpperCase() + props.label.slice(1)
   }
   return(
-    <button type="button" onClick={props.handleClick}>{label}</button>
+    <button className='filter-button' type="button" onClick={props.handleClick}>{label}</button>
   )
 }
 

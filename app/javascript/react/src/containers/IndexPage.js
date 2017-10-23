@@ -79,18 +79,14 @@ class IndexPage extends Component{
 
     return (
       <div>
-<<<<<<< HEAD
-        <div className="add-destination">
-        <a href = '/celestials/new' className = "new-destination">Add a new Destination</a>
+      <div className="filter-button-menu">
+      {filterButtons}
+      </div>
+        <a  href = '/celestials/new'><button id="add-celestial">Add a new celestial</button></a>
+        <div id="title">
+        StarCation
         </div>
-        {celestials}
-=======
-        <div className="index-page-organization">
-          {filterButtons}
-        </div>
-        <a href = '/celestials/new'>Add a new celestial</a>
-        <h1>{celestials}</h1>
->>>>>>> master
+        <div>{celestials}</div>
       </div>
     )
   }

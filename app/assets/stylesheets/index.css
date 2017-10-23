@@ -1,3 +1,8 @@
+body {
+  font-family: ‘Play’, sans-serif;
+  background-color: #E3E3E3;
+}
+
 .add-destination{
   height: 60px;
   width: 100%;
@@ -15,8 +20,65 @@
 
 img{
   border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
 }
 
 .row{
   max-width: 98%;
+}
+
+.filter-button-menu{
+  width: 100%;
+}
+
+.filter-button {
+  margin: 0%;
+  width: 11.11%;
+  padding-bottom: 16px;
+}
+
+.filter-button:hover {
+  background-color: #1f657c;
+}
+
+#add-celestial {
+  background-color: #619599;
+  width: 100%;
+  margin: 0%;
+  padding-bottom: 16px;
+
+}
+
+a {
+  margin: 0%;
+}
+
+#title{
+  font-size: 10rem;
+  text-align: center;
+  padding: 5% 0%;
+  background-image: url('https://media.giphy.com/media/fpxcvLYnRZKlG/giphy.gif');
+  background-repeat: no-repeat center;
+  background-position: center center;
+  background-size: 100%;
+  color: white;
+}
+
+#index-image{
+  display: inline-block;
+}
+
+.celestial-tile{
+  margin: 5% 5% 0% 10%;
+}
+
+.celestial-info{
+  display: inline-block;
+  margin: 2% 0% 0% 2%;
+}
+
+.celestial-info{
+
 }

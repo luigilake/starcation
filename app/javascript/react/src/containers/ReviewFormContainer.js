@@ -43,6 +43,7 @@ class ReviewFormContainer extends Component {
   render(){
     return(
       <form>
+        <h3>New Review Form</h3>
         <label>Review:
           <textarea
             name={"reviewBody"}
@@ -61,7 +62,7 @@ class ReviewFormContainer extends Component {
             <option value={5}>5</option>
           </select>
         </label>
-        <input type="submit" value="Submit" onClick={this.handleSubmit}></input>
+        <button className="submit-button" type="submit" value="Submit" onClick={this.handleSubmit}>Submit</button>
       </form>
 
     )

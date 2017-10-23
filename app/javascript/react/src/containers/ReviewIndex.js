@@ -70,7 +70,7 @@ class ReviewIndex extends Component {
 
     return(
       <div>
-        <h3>Reviews</h3>
+        <h3 className="review-label">Reviews</h3>
         <ReviewFormContainer
           addNewReview={this.addNewReview}
           current_user={this.state.current_user}
