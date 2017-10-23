@@ -1,21 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const ReviewTile = props => {
-  return(
-    <div>
-      <div className="user-review-image">
-        <img src={props.userimage} alt={`Photo of ${props.user}`}></img>
+// maybe convert to constant later?
+class ReviewTile extends Component {
+  constructor(props){
+    super(props)
+    this.state = {}
+  }
+
+  render() {
+
+    return(
+      <div>
+        <div className="user-review-image">
+          <img src={this.props.userimage} alt={`Photo of ${this.props.user}`}></img>
+        </div>
+        <div className="review-info">
+          <p className="review-creator">{this.props.user}</p>
+          <p className="review-body">{this.props.body}</p>
+          <p className="review-rating">Rating: {this.props.rating}</p>
+          <p className="review-votes">Votes: {this.props.votes}</p>
+          <button onClick = {this.props.handleUpClick}>Upvote</button>
+          <button onClick = {this.props.handleDownClick}>Downvote</button>
+        </div>
       </div>
-      <div className="review-info">
-        <p className="review-creator">{props.user}</p>
-        <p className="review-body">{props.body}</p>
-        <p className="review-rating">Rating: {props.rating}</p>
-        <p className="review-votes">Votes: {props.votes}</p>
-        <button>Upvote</button>
-        <button>Downvote</button>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default ReviewTile;

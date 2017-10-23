@@ -19,19 +19,40 @@ class ReviewIndex extends Component {
       method: 'GET',
       headers: { 'Content-Type': 'application/json'}
     })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(response => {
+      this.setState({ reviews: response.reviews, current_user: response.current_user })
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  updateReview(review) {
+    let that = this
+    fetch(`http://localhost:3000/api/v1/celestials/${this.props.id}/reviews/${review.id}`, {
+      credentials: 'same-origin',
+      method: 'PATCH',
+      body: JSON.stringify(review),
+      headers: { 'Content-Type': 'application/json' }
+    })
       .then(response => {
         if (response.ok) {
           return response;
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
-          error = new Error(errorMessage);
+              error = new Error(errorMessage);
           throw(error);
         }
       })
-      .then(response => response.json())
-      .then(response => {
-        this.setState({ reviews: response.reviews, current_user: response.current_user })
-      })
+      // .then(response => response.json())
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
@@ -53,9 +74,36 @@ class ReviewIndex extends Component {
     })
   }
 
+  voteWasClicked(reviewId, vote){
+    let returnedReivew;
+    let theReview;
+    let newReviewsArray = this.state.reviews.map(specificReview => {
+      if (reviewId === specificReview.id) {
+        theReview = specificReview
+        specificReview.votes += vote // -1 or + 1
+      }
+      return(specificReview)
+    })
+
+    this.setState({
+      reviews: newReviewsArray
+    })
+
+    this.updateReview(theReview)
+  }
+
   render(){
     let reviews = this.state.reviews.map( review => {
+      let upClick = () => {
+        this.voteWasClicked(review.id, 1)
+      }
+
+      let downClick = () => {
+        this.voteWasClicked(review.id, -1)
+      }
       return(
+        // renders components in order by the key regardless of record order
+        // in the database
           <ReviewTile
             key={review.id}
             body={review.body}
@@ -64,6 +112,8 @@ class ReviewIndex extends Component {
             user={review.user.username}
             userimage={review.user.avatar.url}
             celestial_id={this.props.id}
+            handleUpClick = {upClick}
+            handleDownClick = {downClick}
           />
       )
     })

@@ -22,6 +22,13 @@ class Api::V1::ReviewsController < ApplicationController
     }
 
     render json: review_object
+    binding.pry
+  end
+
+  def update
+    review_id = params["id"]
+    review_votes = params["votes"]
+    Review.where(:id => review_id).update_all(:votes => review_votes)
   end
 
   private
