@@ -13,8 +13,10 @@ describe('Celestial', () => {
   beforeEach(() => {
     wrapper = mount(
       <CelestialTile
-      name='Andromeda'
-      type='galaxy' />
+        name = 'Andromeda'
+        type = 'galaxy'
+        photo = 'example_photo_url.com'
+      />
     )
   });
 

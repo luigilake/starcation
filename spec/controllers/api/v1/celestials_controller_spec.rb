@@ -34,15 +34,35 @@ RSpec.describe Api::V1::CelestialsController, type: :controller do
       expect(response.status).to eq 200
     end
 
-    it "should return a json with a name, distance, celestial_type, and size" do
-      returned_json = JSON.parse(response.body)
+    it "should return a json with celestial details - name, distance, celestial_type, and size" do
+      returned_json = JSON.parse(response.body)["celestial"]
+      expect(returned_json["name"]).to eq "Planet1"
+      expect(returned_json["distance"]).to eq 1
+      expect(returned_json["celestial_type"]).to eq "planet"
+      expect(returned_json["size"]).to eq 2
+    end
+
+    it "should return a json of a celestial that has list of reviews" do
+      returned_json = JSON.parse(response.body)["reviews"][0]
+      expect(returned_json["body"]).to eq "test review body"
+      expect(returned_json["rating"]).to eq 5
+      expect(returned_json["votes"]).to eq 4
+    end
+
+    it "should return a json of a review that has details about its creator" do
+      returned_json = JSON.parse(response.body)["reviews"][0]
+      expect(returned_json["user"]["first_name"]).to eq "first"
+      expect(returned_json["user"]["last_name"]).to eq "last"
+      expect(returned_json["user"]["username"]).to eq "username"
+      expect(returned_json["user"]["email"]).to eq "123@gmail.com"
+    end
+
+    it "should return a json of a review that has details about its celestial" do
+      returned_json = JSON.parse(response.body)["reviews"][0]
       expect(returned_json["celestial"]["name"]).to eq "Planet1"
       expect(returned_json["celestial"]["distance"]).to eq 1
       expect(returned_json["celestial"]["celestial_type"]).to eq "planet"
       expect(returned_json["celestial"]["size"]).to eq 2
-      expect(returned_json["reviews"][0]["body"]).to eq "test review body"
-      expect(returned_json["reviews"][0]["rating"]).to eq 5
-      expect(returned_json["reviews"][0]["votes"]).to eq 4
     end
   end
 end
