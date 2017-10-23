@@ -1,0 +1,22 @@
+.add-destination{
+  height: 60px;
+  width: 100%;
+}
+
+.new-destination{
+  display: block;
+  float: left;
+  font-size: 200%;
+}
+
+#index-image{
+  border-radius: 300px;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.row{
+  max-width: 98%;
+}

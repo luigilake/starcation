@@ -3,6 +3,7 @@ import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 import NavBar from './components/NavBar'
 import IndexPage from './containers/IndexPage'
 import ShowPage from './containers/ShowPage'
+import Foundation from 'react-foundation'
 
 const App = props => {
   return(

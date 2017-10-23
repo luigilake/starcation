@@ -1,0 +1,22 @@
+#navbar{
+  background-color: #CC5D5D;
+  height: 40px;
+  color: white;
+}
+
+#navbar a.homepage{
+  float: left;
+}
+
+#navbar a{
+  color: white;
+  padding: 25px;
+  padding-top: 8px;
+  display: block;
+  float: right;
+}
+
+#navbar a.searchbar{
+  float: left;
+  padding-left: 600px;
+}
