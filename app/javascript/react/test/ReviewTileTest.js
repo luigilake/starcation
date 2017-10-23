@@ -13,12 +13,22 @@ describe('ReviewTile', () => {
   beforeEach(() => {
     wrapper = mount(
       <ReviewTile
+        user='testUser'
+        userimage='exampleImage'
         body="test review body"
         rating="4"
         votes="5"
       />
     )
   });
+
+  it('should have an image tag with the user image of the review creator', () => {
+    expect(wrapper.find('img'))
+  })
+
+  it('should have a p tag with the username of the review creator', () => {
+    expect(wrapper.find('p.review-creator').text()).toBe("testUser")
+  })
 
   it('should have a p tag with the review body', () => {
     expect(wrapper.find('p.review-body').text()).toBe("test review body")

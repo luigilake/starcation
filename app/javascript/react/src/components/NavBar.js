@@ -12,7 +12,7 @@ const NavBar = props => {
       <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a>
       </div>
       {props.children}
-      </div>
+    </div>
   )
 }
 
