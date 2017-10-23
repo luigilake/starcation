@@ -62,6 +62,7 @@ class ReviewIndex extends Component {
             rating={review.rating}
             votes={review.votes}
             user={review.user.username}
+            userimage={review.user.avatar.url}
             celestial_id={this.props.id}
           />
       )

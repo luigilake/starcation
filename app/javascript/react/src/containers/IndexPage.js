@@ -46,8 +46,6 @@ class IndexPage extends Component{
             id = {celestial.id}
             name = {celestial.name}
             type = {celestial.celestial_type}
-            distance = {celestial.distance}
-            size = {celestial.size}
             photo = {celestial.photo}
           />
         )
@@ -58,8 +56,6 @@ class IndexPage extends Component{
             id = {celestial.id}
             name = {celestial.name}
             type = {celestial.celestial_type}
-            distance = {celestial.distance}
-            size = {celestial.size}
             photo = {celestial.photo}
           />
         )

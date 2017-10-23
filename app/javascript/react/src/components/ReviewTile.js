@@ -3,8 +3,8 @@ import React from 'react';
 const ReviewTile = props => {
   return(
     <div>
-      <div className="user-review-info">
-        IMAGE
+      <div className="user-review-image">
+        <img src={props.userimage} alt={`Photo of ${props.user}`}></img>
       </div>
       <div className="review-info">
         <p className="review-creator">{props.user}</p>
