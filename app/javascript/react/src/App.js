@@ -10,7 +10,6 @@ const App = props => {
     <Router history={browserHistory}>
       <Route path='/' component={NavBar}>
         <IndexRoute component={IndexPage}/>
-        <Route path="/users/sign_out"/>
         <Route path="/celestials" component={IndexPage}/>
         <Route path="/celestials/:id" component={ShowPage}/>
       </Route>

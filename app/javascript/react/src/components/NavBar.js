@@ -46,6 +46,7 @@ class NavBar extends Component {
     <div>
       <div id='navbar'>
       <a href="/users/sign_in">Sign in</a>
+      <a href="/users/edit">edit</a>
       <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a>
       <a href="/users/edit">User Profile</a>
         <Link to='/' className="homepage">Destinations</Link>
