@@ -8,7 +8,7 @@ const NavBar = props => {
       <a href="/users/sign_in">sign in</a>
       <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/users/sign_out">sign out</a>
       {props.children}
-      </div>
+    </div>
   )
 }
 

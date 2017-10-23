@@ -17,4 +17,4 @@ const CelestialTile = (props) => {
   )
 }
 
-export default CelestialTile
+export default CelestialTile;
