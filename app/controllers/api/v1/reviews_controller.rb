@@ -26,6 +26,7 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def update
+    # NOTE: Sending a lot of extra info with post fetch, can we cut down on that someh?
     review_id = params["id"]
     review_votes = params["votes"]
     Review.where(:id => review_id).update_all(:votes => review_votes)
