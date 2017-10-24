@@ -1,6 +1,11 @@
 import React from 'react';
 
 const ReviewTile = props => {
+  let deleteButton;
+  if(props.deleteButton){
+    deleteButton = <a data-confirm="Are you sure?" method="delete" rel="nofollow"  href={`/reviews/${props.id}`} >Delete Review</a>
+  }
+
   return(
     <div className="grid-container review-tile">
       <div className="grid-x">
@@ -15,6 +20,7 @@ const ReviewTile = props => {
         <p className="review-votes">Votes: {props.votes}</p>
         <button>Upvote</button>
         <button>Downvote</button>
+        {deleteButton}
       </div>
       </div>
     </div>

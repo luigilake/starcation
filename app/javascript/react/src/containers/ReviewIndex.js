@@ -65,16 +65,22 @@ class ReviewIndex extends Component {
         celestial={this.props.celestial}
       />
     }
+    let deleteReview = false;
+    if(this.state.current_user.admin){
+      deleteReview = true
+    }
     let reviews = this.state.reviews.map( review => {
       return(
           <ReviewTile
             key={review.id}
+            id={review.id}
             body={review.body}
             rating={review.rating}
             votes={review.votes}
             user={review.user.username}
             userimage={review.user.avatar.url}
             celestial_id={this.props.id}
+            deleteButton={deleteReview}
           />
       )
     })

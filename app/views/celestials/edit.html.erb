@@ -1,4 +1,4 @@
-<h1>New Celestial Form</h1>
+<h1>Celestial Edit form</h1>
 <% if @form_errors %>
   <% @form_errors.each do |error| %>
     <p><%= error %></p>
@@ -29,8 +29,9 @@
     <%= f.file_field :photo %>
   </div>
 
-  <div>
-    <%= f.button "Add Celestial" %>
-  </div>
 
+  <div>
+    <%= f.button "Edit Celestial" %>
+  </div>
+<%= link_to 'Delete Celestial', celestial_path(@celestial),  method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

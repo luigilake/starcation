@@ -9,4 +9,8 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def show
+    render json: User.all
+  end
+
 end
