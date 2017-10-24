@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "edit" do
 
-  scenario 'specifying valid and required information' do
+  xscenario 'specifying valid and required information' do
     visit new_user_session_path
     click_link 'Sign up'
     fill_in 'Username', with: 'testname'
@@ -25,7 +25,7 @@ feature "edit" do
     expect(page).to have_content("Your account has been updated successfully.")
   end
 
-  scenario 'specifying blank information' do
+  xscenario 'specifying blank information' do
   visit new_user_session_path
   click_link 'Sign up'
   fill_in 'Username', with: 'testname'

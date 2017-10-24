@@ -9,13 +9,18 @@ class IndexPage extends Component{
     this.state = {
       celestialsArray: [],
       celestialTypes: ['', 'galaxy', 'constellation', 'star', 'planet', 'satellite', 'comet', 'asteroid', 'other'],
-      selected_type: ''
+      selected_type: '',
+      user_signed_in: false
     }
     this.handleChangeDisplay = this.handleChangeDisplay.bind(this);
   }
 
   componentDidMount(){
-    fetch('/api/v1/celestials')
+    fetch('/api/v1/celestials.json', {
+      credentials: 'same-origin',
+      method: 'GET',
+      headers: { 'Content-Type':'application/json'}
+    })
       .then(response => {
         if (response.ok) {
           return response;
@@ -27,7 +32,7 @@ class IndexPage extends Component{
       })
       .then(response => response.json())
       .then(body => {
-        this.setState({celestialsArray: body})
+        this.setState({celestialsArray: body.celestials, user_signed_in: body.current_user})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -74,6 +79,10 @@ class IndexPage extends Component{
         />
       )
     })
+    let newCelestialButton;
+    if (this.state.user_signed_in){
+        newCelestialButton = <a  href = '/celestials/new'><button id="add-celestial">Add a new celestial</button></a>
+      }
 
 
     return (
@@ -81,7 +90,7 @@ class IndexPage extends Component{
       <div className="filter-button-menu">
       {filterButtons}
       </div>
-        <a  href = '/celestials/new'><button id="add-celestial">Add a new celestial</button></a>
+      {newCelestialButton}
         <div id="title">
         StarCation
         </div>

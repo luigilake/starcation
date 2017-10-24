@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router'
+import SignedOutNavbar from './SignedOutNavbar'
+import SignedInNavbar from './SignedInNavbar'
 
 class NavBar extends Component {
   constructor(props){
@@ -27,32 +29,20 @@ class NavBar extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      console.log(body)
       this.setState({ signed_in: body.signed_in, current_user: body.current_user})
     })
   }
 
   render(){
-    // console.log(this.state)
-    // let user_signed_in;
-    // if(!this.state.signed_in){
-    //   user_signed_in = <div>
-    //   </div>
-    // }else {
-    //   user_signed_in = <div>
-    //   </div>
-    // }
+    let user_signed_in;
+    if(!this.state.signed_in){
+      user_signed_in = <SignedOutNavbar/>
+    }else {
+      user_signed_in = <SignedInNavbar/>
+    }
   return(
     <div>
-      <div id='navbar'>
-      <a href="/users/sign_in">Sign in</a>
-      <a href="/users/edit">edit</a>
-      <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a>
-      <a href="/users/edit">User Profile</a>
-        <Link to='/' className="homepage">Destinations</Link>
-        <a href='/' className='searchbar'>Searchbar Goes Here</a>
-
-      </div>
+      {user_signed_in}
       {this.props.children}
     </div>
     )

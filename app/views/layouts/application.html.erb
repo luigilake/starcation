@@ -6,8 +6,8 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "starcation" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_pack_tag 'index.js' %>
+
     <%= csrf_meta_tags %>
     <style>
 @import url('https://fonts.googleapis.com/css?family=Play');
@@ -15,9 +15,17 @@
   </head>
 
   <body>
-    <p class=“notice”><%= notice %></p>
-   <p class=“alert”><%= alert %></p>
+    <% if notice %>
+      <p class=“notice”><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class=“alert”><%= alert %></p>
+    <% end %>
     <%= yield %>
-    <%= javascript_pack_tag 'index.js' %>
+
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    "application" %>
+
   </body>
 </html>

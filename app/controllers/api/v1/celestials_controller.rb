@@ -3,8 +3,12 @@ class Api::V1::CelestialsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
 
+
   def index
-    render json: Celestial.all
+    render json: {
+      celestials: Celestial.all,
+      current_user: user_signed_in?
+    }
   end
 
   def show

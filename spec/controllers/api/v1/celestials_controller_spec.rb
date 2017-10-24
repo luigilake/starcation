@@ -17,10 +17,10 @@ RSpec.describe Api::V1::CelestialsController, type: :controller do
 
     it "should return a json with a name, distance, celestial_type, and size" do
       returned_json = JSON.parse(response.body)
-      expect(returned_json[0]["name"]).to eq "Planet1"
-      expect(returned_json[0]["distance"]).to eq 1
-      expect(returned_json[0]["celestial_type"]).to eq "planet"
-      expect(returned_json[0]["size"]).to eq 2
+      expect(returned_json['celestials'][0]["name"]).to eq "Planet1"
+      expect(returned_json['celestials'][0]["distance"]).to eq 1
+      expect(returned_json['celestials'][0]["celestial_type"]).to eq "planet"
+      expect(returned_json['celestials'][0]["size"]).to eq 2
     end
   end
 
