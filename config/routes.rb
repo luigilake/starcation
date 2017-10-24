@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :celestials do
         resources :reviews, except: [:show]
       end
+      resources :users, only: [:index]
     end
   end
 

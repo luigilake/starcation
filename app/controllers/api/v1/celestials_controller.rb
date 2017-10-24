@@ -2,8 +2,13 @@ class Api::V1::CelestialsController < ApplicationController
   skip_before_action :verify_authenticity_token
   protect_from_forgery unless: -> { request.format.json? }
 
+
+
   def index
-    render json: Celestial.all
+    render json: {
+      celestials: Celestial.all,
+      current_user: user_signed_in?
+    }
   end
 
   def show

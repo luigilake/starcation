@@ -25,10 +25,10 @@ describe('Celestial', () => {
   })
 
   it('should render an p tag', () => {
-    expect(wrapper.find('p').text()).toBe('galaxy')
+    expect(wrapper.find('p.celestial-type').text()).toBe('Celestial Type: galaxy')
   })
 
-  it('should render an h5 tag', () => {
-    expect(wrapper.find('h5').text()).toBe('Rating: haha')
+  it('should render a p tag', () => {
+    expect(wrapper.find('p.rating').text()).toBe('Rating: haha')
   })
 })
