@@ -6,7 +6,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   # let!(:review1) {Review.create(body: "test review body", votes: 4, rating: 5, user: user, celestial: planet1)}
 
 
-  BREAK MEEEEEEE
+  # BREAK MEEEEEEE
   # TODO: Finish this test!
   # Prevent infinite upvote/downvote
   # Optimize upvote/downvote so it doesn't rerender whole page

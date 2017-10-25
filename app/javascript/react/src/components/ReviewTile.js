@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-// maybe convert to constant later?
 class ReviewTile extends Component {
   constructor(props){
     super(props)

@@ -37,7 +37,7 @@ class IndexPage extends Component{
   }
 
   render() {
-    console.log(this.state.selected_type)
+
     let celestials = this.state.celestialsArray.map(celestial =>{
       if(this.state.selected_type == ''){
         return(
