@@ -11,6 +11,8 @@ class ReviewIndex extends Component {
       current_user: {}
     }
     this.addNewReview = this.addNewReview.bind(this)
+    this.updateReview = this.updateReview.bind(this)
+    this.voteWasClicked = this.voteWasClicked.bind(this)
   }
 
   componentDidMount(){
@@ -20,18 +22,38 @@ class ReviewIndex extends Component {
       method: 'GET',
       headers: { 'Content-Type': 'application/json'}
     })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      this.setState({ reviews: response.reviews, current_user: response.current_user })
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  updateReview(review) {
+    fetch(`http://localhost:3000/api/v1/celestials/${this.props.id}/reviews/${review.review_id}`, {
+      credentials: 'same-origin',
+      method: 'PATCH',
+      body: JSON.stringify(review),
+      headers: { 'Content-Type': 'application/json' }
+    })
       .then(response => {
         if (response.ok) {
           return response;
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
-          error = new Error(errorMessage);
+              error = new Error(errorMessage);
           throw(error);
         }
-      })
-      .then(response => response.json())
-      .then(response => {
-        this.setState({ reviews: response.reviews, current_user: response.current_user })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -54,6 +76,46 @@ class ReviewIndex extends Component {
     })
   }
 
+  voteWasClicked(review_id, vote){
+    let newReviewsArray = this.state.reviews.map(review => {
+      if (review_id === review.id) {
+        if(review.current_user_votes.length == 0){
+          review.votes += vote
+          review.current_user_votes.push({ value: vote })
+        }
+        else {
+          if(review.current_user_votes[0].value == 1 &&
+            vote == -1){
+            review.votes -= 2
+            review.current_user_votes[0].value = -1
+          }
+          else if(review.current_user_votes[0].value == -1 &&
+            vote == 1){
+            review.votes += 2
+            review.current_user_votes[0].value = 1
+          }
+          else if(review.current_user_votes[0].value == 1 &&
+            vote == 1){
+              review.votes -= 1
+              review.current_user_votes[0].value = 0
+          }
+          else if(review.current_user_votes[0].value == -1 &&
+            vote == -1){
+              review.votes += 1
+              review.current_user_votes[0].value = 0
+          }
+          else if(review.current_user_votes[0].value == 0){
+              review.votes += vote
+              review.current_user_votes[0].value = vote
+          }
+        }
+      }
+      return(review)
+    })
+    this.updateReview({review_id: review_id, vote_value: vote})
+    this.setState({reviews: newReviewsArray})
+  }
+
   render(){
     let formAccess;
     if (!this.state.current_user){
@@ -66,6 +128,8 @@ class ReviewIndex extends Component {
       />
     }
     let reviews = this.state.reviews.map( review => {
+      let   upClick = () => { this.voteWasClicked(review.id,  1) }
+      let downClick = () => { this.voteWasClicked(review.id, -1) }
       return(
           <ReviewTile
             key={review.id}
@@ -75,6 +139,8 @@ class ReviewIndex extends Component {
             user={review.user.username}
             userimage={review.user.avatar.url}
             celestial_id={this.props.id}
+            handleUpClick={upClick}
+            handleDownClick={downClick}
           />
       )
     })
@@ -85,7 +151,6 @@ class ReviewIndex extends Component {
         {formAccess}
         {reviews}
       </div>
-
     )
   }
 }

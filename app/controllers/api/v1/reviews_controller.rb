@@ -25,9 +25,42 @@ class Api::V1::ReviewsController < ApplicationController
     render json: review_object
   end
 
+  def update
+    user_id = current_user.id
+
+    @new_vote = Vote.new
+    @new_vote.review_id = params["review_id"]
+    @new_vote.value = params["vote_value"]
+    @new_vote.user_id = current_user.id
+
+    if !@new_vote.save
+      previous_vote = Vote.where(review_id: params["review_id"], user_id: current_user.id)
+      previous_vote_value = previous_vote[0].value
+
+      if previous_vote_value == 0
+        previous_vote_value = params['vote_value']
+      elsif params['vote_value'] == -1
+        if previous_vote_value == -1
+          previous_vote_value = 0
+        else
+          previous_vote_value = -1
+        end
+      elsif params['vote_value'] == 1
+        if previous_vote_value == 1
+          previous_vote_value = 0
+        else
+          previous_vote_value = 1
+        end
+      end
+
+      previous_vote.update_all(value: previous_vote_value)
+    end
+  end
+
   private
 
   def review_params
     params.require(:review).permit(:body, :rating, :celestial_id, :user_id)
   end
+
 end
