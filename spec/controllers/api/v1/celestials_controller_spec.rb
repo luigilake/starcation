@@ -3,7 +3,8 @@ require "rails_helper"
 RSpec.describe Api::V1::CelestialsController, type: :controller do
   let!(:user) {User.create(first_name: "first", last_name: "last", username: "username", email: "123@gmail.com", password: "1234567", password_confirmation: "1234567")}
   let!(:planet1) {Celestial.create(name: "Planet1", distance: 1, celestial_type: "planet", size: 2, user: user)}
-  let!(:review) {Review.create(body: "test review body", photo: 'photo', rating: 5, user_id: user.id, celestial_id: planet1.id)}
+  let!(:review) {Review.create(body: "test review body", photo: "photo", rating: 5, user_id: user.id, celestial_id: planet1.id)}
+
 
   describe "Get#index" do
     before do
