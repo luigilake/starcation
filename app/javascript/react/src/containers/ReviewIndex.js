@@ -78,7 +78,7 @@ class ReviewIndex extends Component {
   }
 
   deleteReview(review_id){
-    fetch(`http://localhost:3000//api/v1/celestials/${this.props.id}/reviews/${review_id}.json`,{
+    fetch(`http://localhost:3000/api/v1/celestials/${this.props.id}/reviews/${review_id}.json`,{
       credentials: 'same-origin',
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json'}

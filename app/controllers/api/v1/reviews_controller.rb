@@ -10,7 +10,6 @@ class Api::V1::ReviewsController < ApplicationController
     review.rating = params["review"]["rating"]
     review.celestial = celestial
     review.user = current_user
-    binding.pry
     review.save
     review_object = {
       id: review.id,
