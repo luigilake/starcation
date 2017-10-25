@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewTile = props => {
   let deleteButton;
   if(props.deleteButton){
-    deleteButton = <a data-confirm="Are you sure?" method="delete" rel="nofollow"  href={`/reviews/${props.id}`} >Delete Review</a>
+    deleteButton = <button onClick={props.handleClick}>Delete Review</button>
   }
 
   return(

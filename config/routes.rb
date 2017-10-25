@@ -8,12 +8,11 @@ Rails.application.routes.draw do
       resources :celestials do
         resources :reviews, except: [:show]
       end
-      resources :users, only: [:index, :show]
+      resources :users, only: [:index, :show, :destroy]
     end
   end
 
   resources :celestials, only: [:new, :create, :update, :edit, :destroy]
-  resources :reviews, only: [:destroy]
 
   get '*path', to: 'static_pages#index'
 

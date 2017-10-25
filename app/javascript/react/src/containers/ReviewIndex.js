@@ -11,6 +11,7 @@ class ReviewIndex extends Component {
       current_user: {}
     }
     this.addNewReview = this.addNewReview.bind(this)
+    this.deleteReview = this.deleteReview.bind(this)
   }
 
   componentDidMount(){
@@ -54,6 +55,28 @@ class ReviewIndex extends Component {
     })
   }
 
+  deleteReview(review_id){
+    fetch(`http://localhost:3000//api/v1/celestials/${this.props.id}/reviews/${review_id}.json`,{
+      credentials: 'same-origin',
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json'}
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body =>{
+      this.setState({ reviews: body})
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
   render(){
     let formAccess;
     if (!this.state.current_user){
@@ -70,6 +93,9 @@ class ReviewIndex extends Component {
       deleteReview = true
     }
     let reviews = this.state.reviews.map( review => {
+      let handleDeleteReview = () => {
+        this.deleteReview(review.id)
+      }
       return(
           <ReviewTile
             key={review.id}
@@ -81,6 +107,7 @@ class ReviewIndex extends Component {
             userimage={review.user.avatar.url}
             celestial_id={this.props.id}
             deleteButton={deleteReview}
+            handleClick={handleDeleteReview}
           />
       )
     })

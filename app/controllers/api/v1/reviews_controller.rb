@@ -25,6 +25,19 @@ class Api::V1::ReviewsController < ApplicationController
     render json: review_object
   end
 
+  def destroy
+    review_id = params[:id]
+    celestial_id = params[:celestial_id]
+
+    review_to_delete = Review.find_by(id: review_id, celestial_id: celestial_id)
+    review_to_delete.delete
+
+    reviews_to_render = Review.where(celestial_id: celestial_id)
+
+    render json: reviews_to_render
+
+  end
+
   private
 
   def review_params

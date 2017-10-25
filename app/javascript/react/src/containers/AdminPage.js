@@ -8,6 +8,8 @@ class AdminPage extends Component {
     this.state = {
       users: []
     }
+
+    this.deleteUser = this.deleteUser.bind(this)
   }
 
   componentDidMount(){
@@ -33,9 +35,37 @@ class AdminPage extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
 
+    deleteUser(user_id){
+      fetch(`http://localhost:3000/api/v1/users/${user_id}.json`,{
+        credentials: 'same-origin',
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json'}
+      })
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(response => response.json())
+      .then(body =>{
+        this.setState({ users: body})
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+    }
+
+
+
   render(){
+
     console.log(this.state.users)
     let users = this.state.users.map( user => {
+      let handleDeleteEvent = () => {
+        this.deleteUser(user.id)
+      }
       return(
         <UserTile
           key={user.id}
@@ -44,6 +74,7 @@ class AdminPage extends Component {
           first_name={user.first_name}
           last_name={user.last_name}
           avatar={user.avatar.url}
+          handleClick={handleDeleteEvent}
         />
       )
     })
