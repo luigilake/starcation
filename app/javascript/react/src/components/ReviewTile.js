@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 const ReviewTile = props => {
   let deleteButton;
@@ -18,8 +18,8 @@ const ReviewTile = props => {
         <p className="review-body">{props.body}</p>
         <p className="review-rating">Rating: {props.rating}</p>
         <p className="review-votes">Votes: {props.votes}</p>
-        <button>Upvote</button>
-        <button>Downvote</button>
+        <button onClick = {props.handleUpClick}>Upvote</button>
+        <button onClick = {props.handleDownClick}>Downvote</button>
         {deleteButton}
       </div>
       </div>

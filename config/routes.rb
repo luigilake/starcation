@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :celestials do
-        resources :reviews, except: [:show]
+        resources :reviews, only: [:create, :update]
       end
       resources :users, only: [:index, :show, :destroy]
     end
