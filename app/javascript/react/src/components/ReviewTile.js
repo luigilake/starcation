@@ -13,8 +13,8 @@ const ReviewTile = props => {
         <p className="review-body">{props.body}</p>
         <p className="review-rating">Rating: {props.rating}</p>
         <p className="review-votes">Votes: {props.votes}</p>
-        <button onClick = {this.props.handleUpClick}>Upvote</button>
-        <button onClick = {this.props.handleDownClick}>Downvote</button>
+        <button onClick = {props.handleUpClick}>Upvote</button>
+        <button onClick = {props.handleDownClick}>Downvote</button>
       </div>
       </div>
     </div>

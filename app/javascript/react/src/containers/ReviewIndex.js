@@ -11,6 +11,8 @@ class ReviewIndex extends Component {
       current_user: {}
     }
     this.addNewReview = this.addNewReview.bind(this)
+    this.updateReview = this.updateReview.bind(this)
+    this.voteWasClicked = this.voteWasClicked.bind(this)
   }
 
   componentDidMount(){
@@ -137,8 +139,8 @@ class ReviewIndex extends Component {
             user={review.user.username}
             userimage={review.user.avatar.url}
             celestial_id={this.props.id}
-            handleUpClick = {upClick}
-            handleDownClick = {downClick}
+            handleUpClick={upClick}
+            handleDownClick={downClick}
           />
       )
     })

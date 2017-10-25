@@ -42,10 +42,6 @@ class IndexPage extends Component{
   }
 
   render() {
-<<<<<<< HEAD
-
-=======
->>>>>>> master
     let celestials = this.state.celestialsArray.map(celestial =>{
       if(this.state.selected_type == ''){
         return(
