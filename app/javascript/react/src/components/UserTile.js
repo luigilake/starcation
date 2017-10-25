@@ -8,9 +8,9 @@ const UserTile = (props) => {
           <img className="user-photo" src={props.avatar} alt={`photo of ${props.username}`}/>
         </div>
         <div className="small-5 cell user-info">
-          <p>{props.username}</p>
-          <p>{props.first_name} {props.last_name}</p>
-          <p>{props.email}</p>
+          <p className="user-name">{props.username}</p>
+          <p className="full-name">{props.first_name} {props.last_name}</p>
+          <p className="email">{props.email}</p>
           <button onClick={props.handleClick}>Delete User</button>
         </div>
       </div>
