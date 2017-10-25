@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 
 const ReviewTile = props => {
+  let deleteButton;
+  if(props.deleteButton){
+    deleteButton = <button onClick={props.handleClick}>Delete Review</button>
+  }
+
   return(
     <div className="grid-container review-tile">
       <div className="grid-x">
@@ -15,6 +20,7 @@ const ReviewTile = props => {
         <p className="review-votes">Votes: {props.votes}</p>
         <button onClick = {props.handleUpClick}>Upvote</button>
         <button onClick = {props.handleDownClick}>Downvote</button>
+        {deleteButton}
       </div>
       </div>
     </div>

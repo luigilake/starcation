@@ -4,6 +4,6 @@ class RemoveVotes < ActiveRecord::Migration[5.1]
   end
 
   def down
-    add_column :reviews, :votes
+    add_column :reviews, :votes, :integer, default: 0
   end
 end

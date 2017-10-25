@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router'
 import SignedOutNavbar from './SignedOutNavbar'
 import SignedInNavbar from './SignedInNavbar'
+import AdminNavbar from './AdminNavbar'
 
 class NavBar extends Component {
   constructor(props){
@@ -36,9 +37,13 @@ class NavBar extends Component {
   render(){
     let user_signed_in;
     if(!this.state.signed_in){
-      user_signed_in = <SignedOutNavbar/>
+        user_signed_in = <SignedOutNavbar/>
     }else {
-      user_signed_in = <SignedInNavbar/>
+      if(this.state.current_user.admin){
+        user_signed_in = <AdminNavbar/>
+      } else {
+        user_signed_in = <SignedInNavbar/>
+      }
     }
   return(
     <div>

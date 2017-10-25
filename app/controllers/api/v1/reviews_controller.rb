@@ -14,12 +14,13 @@ class Api::V1::ReviewsController < ApplicationController
     review_object = {
       id: review.id,
       body: review.body,
-      rating: review.rating,
       votes: 0,
+      rating: review.rating,
       celestial: celestial,
       user: current_user,
       created_at: review.created_at,
-      updated_at: review.updated_at
+      updated_at: review.updated_at,
+      current_user_votes: []
     }
 
     render json: review_object
@@ -55,6 +56,19 @@ class Api::V1::ReviewsController < ApplicationController
 
       previous_vote.update_all(value: previous_vote_value)
     end
+  end
+
+  def destroy
+    review_id = params[:id]
+    celestial_id = params[:celestial_id]
+
+    review_to_delete = Review.find_by(id: review_id, celestial_id: celestial_id)
+    review_to_delete.delete
+
+    reviews_to_render = Review.where(celestial_id: celestial_id)
+
+    render json: reviews_to_render
+
   end
 
   private

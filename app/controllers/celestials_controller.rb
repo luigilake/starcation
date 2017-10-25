@@ -23,6 +23,27 @@ class CelestialsController < ApplicationController
     end
   end
 
+  def edit
+    @celestial = Celestial.find(params[:id])
+    @array_of_types = CelestialTypes::TYPES
+  end
+
+  def update
+    @celestial = Celestial.find(params[:id])
+    if @celestial.update(celestial_params)
+      redirect_to @celestial
+    else
+      @form_errors = @celestial.errors.full_messages
+      render :edit
+    end
+  end
+
+  def destroy
+      @celestial = Celestial.find(params[:id])
+      @celestial.destroy
+      redirect_to '/'
+  end
+
   private
 
   def celestial_params

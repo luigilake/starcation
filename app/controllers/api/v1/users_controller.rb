@@ -9,4 +9,16 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def show
+    render json: User.all
+  end
+
+  def destroy
+    user_id = params[:id]
+
+    user_to_delete = User.find_by(id: user_id)
+    user_to_delete.delete
+    render json: User.all
+  end
+
 end

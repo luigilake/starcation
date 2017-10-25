@@ -13,6 +13,7 @@ class ReviewIndex extends Component {
     this.addNewReview = this.addNewReview.bind(this)
     this.updateReview = this.updateReview.bind(this)
     this.voteWasClicked = this.voteWasClicked.bind(this)
+    this.deleteReview = this.deleteReview.bind(this)
   }
 
   componentDidMount(){
@@ -76,6 +77,28 @@ class ReviewIndex extends Component {
     })
   }
 
+  deleteReview(review_id){
+    fetch(`http://localhost:3000/api/v1/celestials/${this.props.id}/reviews/${review_id}.json`,{
+      credentials: 'same-origin',
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json'}
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body =>{
+      this.setState({ reviews: body})
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
   voteWasClicked(review_id, vote){
     let newReviewsArray = this.state.reviews.map(review => {
       if (review_id === review.id) {
@@ -127,18 +150,29 @@ class ReviewIndex extends Component {
         celestial={this.props.celestial}
       />
     }
+    let deleteReview = false;
+    if(this.state.current_user.admin){
+      deleteReview = true
+    }
     let reviews = this.state.reviews.map( review => {
+
+      let handleDeleteReview = () => {
+        this.deleteReview(review.id)
+      }
       let   upClick = () => { this.voteWasClicked(review.id,  1) }
       let downClick = () => { this.voteWasClicked(review.id, -1) }
       return(
           <ReviewTile
             key={review.id}
+            id={review.id}
             body={review.body}
             rating={review.rating}
             votes={review.votes}
             user={review.user.username}
             userimage={review.user.avatar.url}
             celestial_id={this.props.id}
+            deleteButton={deleteReview}
+            handleClick={handleDeleteReview}
             handleUpClick={upClick}
             handleDownClick={downClick}
           />

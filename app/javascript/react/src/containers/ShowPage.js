@@ -6,7 +6,8 @@ class ShowPage extends Component{
     super(props)
     this.state = {
       celestial: {},
-      photo: ''
+      photo: '',
+      current_user: {}
     }
   }
 
@@ -28,12 +29,21 @@ class ShowPage extends Component{
       })
       .then(response => response.json())
       .then(response => {
-        this.setState({ celestial: response.celestial, photo: response.celestial.photo.url})
+        let user = {}
+        if(response.current_user){
+          user = response.current_user
+        }
+        this.setState({ celestial: response.celestial, photo: response.celestial.photo.url, current_user: user})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render() {
+    console.log(this.state)
+    let editButton;
+    if(this.state.current_user.id == this.state.celestial.user_id || this.state.current_user.admin){
+      editButton = <a href={`/celestials/${this.state.celestial.id}/edit`}><button>Edit Celestial</button></a>
+    }
     let celestial = this.state.celestial
     return (
       <div>
@@ -50,6 +60,7 @@ class ShowPage extends Component{
             <li>Size: {celestial.size}</li>
             <li>Distance: {celestial.distance} lightyears from Earth</li>
           </ul>
+          {editButton}
         </div>
         <div className="review-index">
           <ReviewIndex

@@ -1,0 +1,10 @@
+.user-avatar-image{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.user-info{
+  display: inline-block;
+}
