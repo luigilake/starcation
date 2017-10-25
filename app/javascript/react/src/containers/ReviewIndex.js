@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReviewTile from '../components/ReviewTile'
 import ReviewFormContainer from './ReviewFormContainer'
+import ReviewFormInaccessible from '../components/ReviewFormInaccessible'
 
 class ReviewIndex extends Component {
   constructor(props){
@@ -114,6 +115,16 @@ class ReviewIndex extends Component {
   }
 
   render(){
+    let formAccess;
+    if (!this.state.current_user){
+      formAccess = <ReviewFormInaccessible/>
+    }else {
+      formAccess = <ReviewFormContainer
+        addNewReview={this.addNewReview}
+        current_user={this.state.current_user}
+        celestial={this.props.celestial}
+      />
+    }
     let reviews = this.state.reviews.map( review => {
       let   upClick = () => { this.voteWasClicked(review.id,  1) }
       let downClick = () => { this.voteWasClicked(review.id, -1) }
@@ -134,12 +145,8 @@ class ReviewIndex extends Component {
 
     return(
       <div>
-        <h3>Reviews</h3>
-        <ReviewFormContainer
-          addNewReview={this.addNewReview}
-          current_user={this.state.current_user}
-          celestial={this.props.celestial}
-        />
+        <h3 className="review-label">Reviews</h3>
+        {formAccess}
         {reviews}
       </div>
     )

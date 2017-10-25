@@ -5,7 +5,8 @@ class ReviewFormContainer extends Component {
     super(props)
     this.state = {
       reviewBody: '',
-      rating: 0
+      rating: 0,
+      errors: []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,14 +22,21 @@ class ReviewFormContainer extends Component {
   clearForm(){
     this.setState({
       reviewBody: '',
-      rating: 0
+      rating: 0,
+      errors: []
     })
   }
 
   handleSubmit(event){
     event.preventDefault();
     if(this.state.reviewBody == '' || this.state.rating == 0){
-
+      let error_array = []
+      if (this.state.reviewBody == ''){
+        error_array.push("Please type fill out the review input.")
+      } else if (this.state.rating == 0){
+        error_array.push("Please select a rating between 1 and 5")
+      }
+      this.setState({errors: error_array})
     } else {
       let formPayload = {
         body: this.state.reviewBody,
@@ -41,9 +49,20 @@ class ReviewFormContainer extends Component {
   }
 
   render(){
+    let errors = this.state.errors
+    let error_messages = []
+    if(errors.length > 0){
+      error_messages = errors.map( error => {
+        return(
+          <li>{error}</li>
+        )
+      })
+    }
     return(
       <form>
+        <h3>New Review Form</h3>
         <label>Review:
+          <ul>{errors}</ul>
           <textarea
             name={"reviewBody"}
             value={this.state.reviewBody}
@@ -61,7 +80,7 @@ class ReviewFormContainer extends Component {
             <option value={5}>5</option>
           </select>
         </label>
-        <input type="submit" value="Submit" onClick={this.handleSubmit}></input>
+        <button className="submit-button" type="submit" value="Submit" onClick={this.handleSubmit}>Submit</button>
       </form>
 
     )

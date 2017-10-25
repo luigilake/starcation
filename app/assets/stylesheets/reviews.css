@@ -1,0 +1,37 @@
+.user-review-image{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.review-info{
+  display: inline-block;
+}
+
+.user-photo{
+  height: 90px;
+  width: 90px;
+  vertical-align: middle;
+}
+
+form{
+  margin: 2%;
+  width: 40%;
+  border: 3px solid #999DA6;
+  padding: 2%;
+  border-radius: 25px;
+
+}
+
+textarea{
+  max-width: 608px;
+}
+
+.submit-button{
+  color: white;
+}
+
+.review-label{
+  margin-left: 4%;
+}
