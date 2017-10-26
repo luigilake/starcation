@@ -2,20 +2,23 @@ import React, {Component} from 'react';
 import { Link } from 'react-router';
 import CelestialTile from '../components/CelestialTile'
 import FilterButton from '../components/FilterButton'
+import SearchBar from '../components/SearchBar'
 
-class IndexPage extends Component{
+class IndexPage extends Component {
   constructor(props){
     super(props)
     this.state = {
       celestialsArray: [],
       celestialTypes: ['', 'galaxy', 'constellation', 'star', 'planet', 'satellite', 'comet', 'asteroid', 'other'],
       selected_type: '',
-      user_signed_in: false
+      user_signed_in: false,
+      search: ''
     }
     this.handleChangeDisplay = this.handleChangeDisplay.bind(this);
+    this.handleSearchChange = this.handleSearchChange.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     fetch('/api/v1/celestials.json', {
       credentials: 'same-origin',
       method: 'GET',
@@ -37,35 +40,74 @@ class IndexPage extends Component{
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  handleChangeDisplay(celestial_type){
+  handleChangeDisplay(celestial_type) {
     this.setState({selected_type: celestial_type})
   }
 
-  render() {
-    let celestials = this.state.celestialsArray.map(celestial =>{
-      if(this.state.selected_type == ''){
-        return(
-          <CelestialTile
-            key = {celestial.id}
-            id = {celestial.id}
-            name = {celestial.name}
-            type = {celestial.celestial_type}
-            photo = {celestial.photo}
-          />
-        )
-      } else if (this.state.selected_type == celestial.celestial_type){
-        return(
-          <CelestialTile
-            key = {celestial.id}
-            id = {celestial.id}
-            name = {celestial.name}
-            type = {celestial.celestial_type}
-            photo = {celestial.photo}
-          />
-        )
-      }
-    })
+  handleSearchChange(event) {
+    this.setState({search: event.target.value})
+  }
 
+
+
+  render() {
+    // if searchResults is not null/empty string
+    //   let searchResults = this.celestials.filter(celestial => {
+    //     return celestial.name.indexOf(this.state.search) !== -1
+    //   })
+    //   map through tiles here
+    let celestials;
+    if (this.state.search !== '') {
+      // NOTE: Should we limit search results to like 10 for performance reasons?
+
+      celestials = this.state.celestialsArray.filter(celestial => {
+          return celestial.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+        })
+
+
+      celestials = celestials.map(celestial => {
+        return(
+          <CelestialTile
+            key = {celestial.id}
+            id = {celestial.id}
+            name = {celestial.name}
+            type = {celestial.celestial_type}
+            photo = {celestial.photo}
+          />
+        )
+      })
+      // debugger
+    }
+
+    else {
+      // debugger
+      celestials = this.state.celestialsArray.map(celestial => {
+        if(this.state.selected_type == '') {
+          return(
+            <CelestialTile
+              key = {celestial.id}
+              id = {celestial.id}
+              name = {celestial.name}
+              type = {celestial.celestial_type}
+              photo = {celestial.photo}
+            />
+          )
+        }
+
+        else if (this.state.selected_type == celestial.celestial_type) {
+          return(
+            <CelestialTile
+              key = {celestial.id}
+              id = {celestial.id}
+              name = {celestial.name}
+              type = {celestial.celestial_type}
+              photo = {celestial.photo}
+            />
+          )
+        }
+      })
+    }
+    // debugger
     let filterButtons = this.state.celestialTypes.map(type => {
       let handleClick = () => {
         this.handleChangeDisplay(type)
@@ -87,6 +129,12 @@ class IndexPage extends Component{
 
     return (
       <div>
+        <div className="searchbar">
+          <SearchBar
+            value = {this.state.search}
+            handleSearchChange = {this.handleSearchChange}
+          />
+        </div>
       <div className="filter-button-menu">
       {filterButtons}
       </div>
