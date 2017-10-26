@@ -1,25 +1,12 @@
-#navbar{
+.nav-bar{
   background-color: #CC5D5D;
-  height: 50px;
+}
+
+.nav-bar a {
   color: white;
+}
+
+.nav-bar .navbar-button {
   margin: 0%;
-  padding: .7% 0%;
-}
-
-#navbar a.homepage{
-  float: left;
-  padding: 0px;
-}
-
-#navbar a{
-  color: white;
-  padding: 0px;
-  display: block;
-  float: right;
-  padding-right: 1%;
-}
-
-#navbar a.searchbar{
-  float: left;
-  padding-left: 38%;
+  background: #CB5D5E;
 }

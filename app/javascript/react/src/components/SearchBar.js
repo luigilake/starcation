@@ -16,7 +16,6 @@ const SearchBar = props => {
           />
       </label>
     </div>
-
   );
 }
 

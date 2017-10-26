@@ -51,19 +51,11 @@ class IndexPage extends Component {
 
 
   render() {
-    // if searchResults is not null/empty string
-    //   let searchResults = this.celestials.filter(celestial => {
-    //     return celestial.name.indexOf(this.state.search) !== -1
-    //   })
-    //   map through tiles here
     let celestials;
     if (this.state.search !== '') {
-      // NOTE: Should we limit search results to like 10 for performance reasons?
-
       celestials = this.state.celestialsArray.filter(celestial => {
           return celestial.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
         })
-
 
       celestials = celestials.map(celestial => {
         return(
@@ -76,11 +68,9 @@ class IndexPage extends Component {
           />
         )
       })
-      // debugger
     }
 
     else {
-      // debugger
       celestials = this.state.celestialsArray.map(celestial => {
         if(this.state.selected_type == '') {
           return(
@@ -107,7 +97,6 @@ class IndexPage extends Component {
         }
       })
     }
-    // debugger
     let filterButtons = this.state.celestialTypes.map(type => {
       let handleClick = () => {
         this.handleChangeDisplay(type)
@@ -126,7 +115,6 @@ class IndexPage extends Component {
         newCelestialButton = <a  href = '/celestials/new'><button id="add-celestial">Add a new celestial</button></a>
       }
 
-
     return (
       <div>
         <div className="searchbar">
@@ -135,14 +123,20 @@ class IndexPage extends Component {
             handleSearchChange = {this.handleSearchChange}
           />
         </div>
-      <div className="filter-button-menu">
-      {filterButtons}
-      </div>
-      {newCelestialButton}
+        <div className="grid-container filter-button-menu">
+          <div className="grid-x filter-button-menu">
+            {filterButtons}
+          </div>
+        </div>
+        {newCelestialButton}
         <div id="title">
         StarCation
         </div>
-        <div>{celestials}</div>
+        <div className="grid-container celestial-list">
+          <div className="grid-x">
+            {celestials}
+          </div>
+        </div>
       </div>
     )
   }
