@@ -14,7 +14,6 @@ const ReviewTile = props => {
         <p className="review-creator">{props.user}</p>
       </div>
       <div className="small-5 cell review-info">
-        <p> Review: </p>
         <p className="review-body">{props.body}</p>
         <p className="review-rating">Rating: {props.rating}</p>
         <p className="review-votes">Votes: {props.votes}</p>

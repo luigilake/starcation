@@ -59,10 +59,10 @@ class ReviewFormContainer extends Component {
       })
     }
     return(
-      <form>
-        <h3>New Review Form</h3>
+      <form className='review-form'>
+        <h3 className='review-form-header'>New Review Form</h3>
+        <ul>{errors}</ul>
         <label>Review:
-          <ul>{errors}</ul>
           <textarea
             name={"reviewBody"}
             value={this.state.reviewBody}

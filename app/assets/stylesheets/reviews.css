@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Teko');
+
 .user-review-image{
   display: inline-block;
   vertical-align: top;
@@ -7,12 +9,15 @@
 
 .review-info{
   display: inline-block;
+  border-bottom-style: solid;
+  border-color: #999DA5;
 }
 
 .user-photo{
   height: 90px;
   width: 90px;
   vertical-align: middle;
+
 }
 
 form{
@@ -28,6 +33,11 @@ textarea{
   max-width: 608px;
 }
 
+.review-body {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5rem;
+}
+
 .submit-button{
   color: white;
 }
@@ -36,6 +46,37 @@ textarea{
   margin-left: 4%;
 }
 
+.review-rating {
+  font-weight: bold;
+}
+
+.review-votes{
+  font-weight: bold;
+}
+
 .user-tile{
   margin: 5%;
+}
+
+.review-tile{
+  margin-top: 2em;
+}
+
+.review-creator {
+  margin-left: 0.4em;
+}
+
+.review-form {
+  margin-left: 9em;
+  width: 41.5%;
+}
+
+.review-form-header {
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+}
+
+.review-form label, textarea {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5rem;
 }

@@ -12,7 +12,6 @@ const CelestialTile = (props) => {
       <div className="celestial-info">
         <Link to={`/celestials/${props.id}`}><h1 className="celestial-name">{props.name}</h1></Link>
         <p className = "celestial-type">Celestial Type: {props.type}</p>
-        <p className="rating">Rating: haha</p>
       </div>
     </div>
   )
