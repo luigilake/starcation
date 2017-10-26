@@ -87,14 +87,20 @@ class IndexPage extends Component{
 
     return (
       <div>
-      <div className="filter-button-menu">
-      {filterButtons}
+      <div className="grid-container filter-button-menu">
+        <div className="grid-x filter-button-menu">
+          {filterButtons}
+        </div>
       </div>
       {newCelestialButton}
         <div id="title">
         StarCation
         </div>
-        <div>{celestials}</div>
+        <div className="grid-container celestial-list">
+          <div className="grid-x">
+            {celestials}
+          </div>
+        </div>
       </div>
     )
   }
