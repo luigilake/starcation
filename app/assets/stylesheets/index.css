@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Teko');
+
 body {
-  font-family: ‘Play’, sans-serif;
   background-color: #E3E3E3;
 }
 
@@ -14,8 +15,15 @@ body {
   font-size: 200%;
 }
 
-#index-image{
+.index-image-container{
   border-radius: 300px;
+  height: 400px;
+  min-width: 400px;
+}
+
+.index-image {
+  height: 400px;
+  overflow: hidden;
 }
 
 img{
@@ -35,11 +43,12 @@ img{
 
 .filter-button-menu{
   width: 100%;
+  text-align: center;
+  background: #078DB8;
 }
 
 .filter-button {
   margin: 0%;
-  width: 11.11%;
   padding-bottom: 16px;
 }
 
@@ -52,7 +61,10 @@ img{
   width: 100%;
   margin: 0%;
   padding-bottom: 16px;
+}
 
+.celestial-list {
+  text-align: center
 }
 
 a {
@@ -62,27 +74,39 @@ a {
 #title{
   font-size: 10rem;
   text-align: center;
-  padding: 5% 0%;
+  padding: 7% 0%;
   background-image: url('https://media.giphy.com/media/fpxcvLYnRZKlG/giphy.gif');
   background-repeat: no-repeat center;
   background-position: center center;
   background-size: 100%;
   color: white;
-}
+  font-family: 'Teko', sans-serif;
 
-#index-image{
-  display: inline-block;
 }
 
 .celestial-tile{
-  margin: 5% 5% 0% 10%;
-}
-
-.celestial-info{
+  margin: 3% 0% 0% 0%;
   display: inline-block;
-  margin: 2% 0% 0% 2%;
+  text-align: center;
+  min-width: 400px;
+
 }
 
 .celestial-info{
+  padding: auto;
+  margin: 2% 0% 0% 0%;
+  text-align: center;
+}
 
+.celestial-info p, .celestial-info .celestial-name {
+  font-family: 'Teko', sans-serif;
+}
+
+.celestial-info .celestial-name {
+  font-size: 5rem;
+}
+
+.celestial-info p {
+  font-size: 2rem;
+  margin-bottom: 0%;
 }
