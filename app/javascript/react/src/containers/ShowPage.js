@@ -46,27 +46,27 @@ class ShowPage extends Component{
     }
     let celestial = this.state.celestial
     return (
-      <div>
-        <div className="showpage-photo">
-          <img src={this.state.photo} alt={`Photo of ${celestial.name}`}></img>
-        </div>
-        <div className="showpage-title">
-          <h1>{celestial.name}</h1>
-        </div>
-        <div className="showpage-info">
-          <h3>Details:</h3>
-          <ul>
-            <li>Type: {celestial.celestial_type}</li>
-            <li>Size: {celestial.size}</li>
-            <li>Distance: {celestial.distance} lightyears from Earth</li>
-          </ul>
-          {editButton}
-        </div>
-        <div className="review-index">
-          <ReviewIndex
-            id={this.props.params.id}
-            celestial={celestial}
-          />
+      <div className="grid-container">
+        <div className="grid-x">
+          <div className="small-12 medium-6 large-3 cell main-show-details">
+            <img src={this.state.photo} alt={`Photo of ${celestial.name}`}></img>
+            <h1>{celestial.name}</h1>
+            <div className="showpage-info">
+              <h3>Details:</h3>
+              <ul>
+                <p>Type: {celestial.celestial_type}</p>
+                <p>Size: {celestial.size}</p>
+                <p>Distance: {celestial.distance} lightyears from Earth</p>
+              </ul>
+              {editButton}
+            </div>
+          </div>
+          <div className="small-12 medium-6 large-8 cell main-show-reviews review-index">
+            <ReviewIndex
+              id={this.props.params.id}
+              celestial={celestial}
+            />
+          </div>
         </div>
       </div>
     )
