@@ -117,12 +117,6 @@ class IndexPage extends Component {
 
     return (
       <div>
-        <div className="searchbar">
-          <SearchBar
-            value = {this.state.search}
-            handleSearchChange = {this.handleSearchChange}
-          />
-        </div>
         <div className="grid-container filter-button-menu">
           <div className="grid-x filter-button-menu">
             {filterButtons}
@@ -131,6 +125,12 @@ class IndexPage extends Component {
         {newCelestialButton}
         <div id="title">
         StarCation
+        </div>
+        <div className="searchbar">
+          <SearchBar
+            value = {this.state.search}
+            handleSearchChange = {this.handleSearchChange}
+          />
         </div>
         <div className="grid-container celestial-list">
           <div className="grid-x">

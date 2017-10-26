@@ -110,3 +110,15 @@ a {
   font-size: 2rem;
   margin-bottom: 0%;
 }
+
+.searchbar {
+  width: 50%;
+  margin: 0 auto;
+  height: 6rem;
+}
+
+input#search-field {
+  height: 4rem;
+  margin-top: 1rem;
+  font-size: 150%;
+}

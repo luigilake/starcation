@@ -3,7 +3,7 @@ import React from 'react'
 import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 
-describe('SignedInNavbar', () => {
+describe('SignedOutNavbar', () => {
   let wrapper;
 
   beforeEach(() => {
@@ -18,10 +18,6 @@ it('should render a link to sign in', () => {
 
 it('should render a link to sign up', () => {
   expect(wrapper.find('a.sign-up').text()).toBe('Sign up')
-})
-
-it('should render a link to homepage', () => {
-  expect(wrapper.find('a.homepage').text()).toBe('Destinations')
 })
 
 })

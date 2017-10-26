@@ -13,15 +13,6 @@ describe('SignedInNavbar', () => {
   });
 
 it('should render a link to sign out', () => {
-  expect(wrapper.find('a.sign-out').text()).toBe('Sign out')
+  expect(wrapper.find('button')).toBePresent();
 })
-
-it('should render a link to edit profile', () => {
-  expect(wrapper.find('a.user-profile').text()).toBe('User Profile')
-})
-
-it('should render a link to homepage', () => {
-  expect(wrapper.find('a.homepage').text()).toBe('Destinations')
-})
-
 })
