@@ -15,19 +15,6 @@
   vertical-align: middle;
 }
 
-form{
-  margin: 2%;
-  width: 40%;
-  border: 3px solid #999DA6;
-  padding: 2%;
-  border-radius: 25px;
-
-}
-
-textarea{
-  max-width: 608px;
-}
-
 .submit-button{
   color: white;
 }

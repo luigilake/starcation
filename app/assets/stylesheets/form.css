@@ -1,0 +1,78 @@
+div.form-container{
+ width: 30%;
+ margin: 0 auto;
+ min-width: 350px;
+}
+
+form.new_user{
+  margin: 0 auto;
+}
+
+form#review-form{
+  width: 100%;
+
+}
+form{
+  margin: 0 auto;
+  width: 100%;
+  border: 3px solid #999DA6;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: white;
+
+}
+
+
+textarea{
+  max-width: 608px;
+}
+
+.actions input{
+  background-color: #0E8EB6;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  border: 0;
+  padding: 16px 32px;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+}
+
+.actions input:hover{
+  background-color: #1f657c;
+}
+
+
+.form-container .field{
+  margin-left: 3%;
+  margin: 4%;
+}
+
+.form-container .actions{
+  margin-left: 3%;
+  margin: 4%;
+}
+
+.button_to input{
+  background-color: #0E8EB6;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  border: 0;
+  padding: 16px 32px;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+}
+
+.button_to input:hover{
+  background-color: #1f657c;
+}
+
+form a {
+  margin-left: 3%;
+  margin: 4%;
+}
