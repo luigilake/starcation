@@ -10,7 +10,7 @@ const SignedInNavbar = props => {
           <button className="small-12 medium-4 large-1 large-offset-9 cell navbar-button">User Profile</button>
         </a>
         <a data-confirm="Are you sure?" rel="nofollow" href="/users/sign_out">
-          <button className="small-12 medium-4 large-1 cell navbar-button">Sign out</button>
+          <button className="small-12 medium-4 large-1 cell navbar-button sign-out" id="sign-out">Sign out</button>
         </a>
       </div>
     </div>
