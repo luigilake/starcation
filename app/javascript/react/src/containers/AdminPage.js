@@ -14,7 +14,7 @@ class AdminPage extends Component {
 
   componentDidMount(){
     let id = this.props.id
-    fetch(`http://localhost:3000/api/v1/users/1.json`,{
+    fetch(`/api/v1/users/1.json`,{
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json'}

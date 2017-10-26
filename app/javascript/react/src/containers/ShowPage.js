@@ -13,7 +13,7 @@ class ShowPage extends Component{
 
   componentDidMount(){
     let id = this.props.params.id
-    fetch(`http://localhost:3000/api/v1/celestials/${id}.json`, {
+    fetch(`/api/v1/celestials/${id}.json`, {
       credentials: "same-origin",
       method: "GET",
       headers: {"Content-Type": "application/json"}

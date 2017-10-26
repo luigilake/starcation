@@ -18,7 +18,7 @@ class ReviewIndex extends Component {
 
   componentDidMount(){
     let id = this.props.id
-    fetch(`http://localhost:3000/api/v1/celestials/${id}.json`,{
+    fetch(`/api/v1/celestials/${id}.json`,{
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json'}
@@ -41,7 +41,7 @@ class ReviewIndex extends Component {
   }
 
   updateReview(review) {
-    fetch(`http://localhost:3000/api/v1/celestials/${this.props.id}/reviews/${review.review_id}`, {
+    fetch(`/api/v1/celestials/${this.props.id}/reviews/${review.review_id}`, {
       credentials: 'same-origin',
       method: 'PATCH',
       body: JSON.stringify(review),
@@ -78,7 +78,7 @@ class ReviewIndex extends Component {
   }
 
   deleteReview(review_id){
-    fetch(`http://localhost:3000/api/v1/celestials/${this.props.id}/reviews/${review_id}.json`,{
+    fetch(`/api/v1/celestials/${this.props.id}/reviews/${review_id}.json`,{
       credentials: 'same-origin',
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json'}
@@ -105,29 +105,24 @@ class ReviewIndex extends Component {
         if(review.current_user_votes.length == 0){
           review.votes += vote
           review.current_user_votes.push({ value: vote })
-        }
-        else {
+        } else {
           if(review.current_user_votes[0].value == 1 &&
             vote == -1){
             review.votes -= 2
             review.current_user_votes[0].value = -1
-          }
-          else if(review.current_user_votes[0].value == -1 &&
+          } else if(review.current_user_votes[0].value == -1 &&
             vote == 1){
             review.votes += 2
             review.current_user_votes[0].value = 1
-          }
-          else if(review.current_user_votes[0].value == 1 &&
+          } else if(review.current_user_votes[0].value == 1 &&
             vote == 1){
               review.votes -= 1
               review.current_user_votes[0].value = 0
-          }
-          else if(review.current_user_votes[0].value == -1 &&
+          } else if(review.current_user_votes[0].value == -1 &&
             vote == -1){
               review.votes += 1
               review.current_user_votes[0].value = 0
-          }
-          else if(review.current_user_votes[0].value == 0){
+          } else if(review.current_user_votes[0].value == 0){
               review.votes += vote
               review.current_user_votes[0].value = vote
           }
@@ -141,6 +136,8 @@ class ReviewIndex extends Component {
 
   render(){
     let formAccess;
+    let deleteReview = false;
+
     if (!this.state.current_user){
       formAccess = <ReviewFormInaccessible/>
     }else {
@@ -149,19 +146,18 @@ class ReviewIndex extends Component {
         current_user={this.state.current_user}
         celestial={this.props.celestial}
       />
+      if(this.state.current_user.admin){
+        deleteReview = true
+      }
     }
-    let deleteReview = false;
-    if(this.state.current_user.admin){
-      deleteReview = true
-    }
-    let reviews = this.state.reviews.map( review => {
 
+    let reviews = this.state.reviews.map( review => {
       let handleDeleteReview = () => {
         this.deleteReview(review.id)
       }
       let   upClick = () => { this.voteWasClicked(review.id,  1) }
       let downClick = () => { this.voteWasClicked(review.id, -1) }
-      return(
+        return(
           <ReviewTile
             key={review.id}
             id={review.id}
@@ -176,7 +172,7 @@ class ReviewIndex extends Component {
             handleUpClick={upClick}
             handleDownClick={downClick}
           />
-      )
+        )
     })
 
     return(

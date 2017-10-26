@@ -48,16 +48,4 @@ feature 'add new celestial' do
     expect(page).to have_content("Size can't be blank")
 
   end
-
-
-
-
-
-  # scenario '' do
-  #
-  # end
-  #
-  # scenario '' do
-  #
-  # end
 end
