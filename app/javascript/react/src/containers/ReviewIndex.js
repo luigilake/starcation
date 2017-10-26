@@ -179,7 +179,9 @@ class ReviewIndex extends Component {
       <div>
         <h3 className="review-label">Reviews</h3>
         {formAccess}
-        {reviews}
+        <div className="review-list">  
+          {reviews}
+        </div>
       </div>
     )
   }
