@@ -15,7 +15,12 @@ class Api::V1::CelestialsController < ApplicationController
     @id = params[:id]
     celestial = Celestial.find(@id)
     reviews = celestial.reviews
+
     review_info = reviews.map do |review|
+      user_votes = []
+      if current_user
+        user_votes = Vote.where(user_id: current_user.id, review_id: review.id)
+      end
       votes_joins = Vote.where(review_id: (review.id))
       sum_of_votes = 0
       if votes_joins
@@ -35,7 +40,7 @@ class Api::V1::CelestialsController < ApplicationController
           celestial: review.celestial,
           created_at: review.created_at,
           updated_at: review.updated_at,
-          current_user_votes: Vote.where(user_id: current_user.id, review_id: review.id)
+          current_user_votes: user_votes
         }
     end
     render json: {celestial: celestial, current_user: current_user, reviews: review_info}
