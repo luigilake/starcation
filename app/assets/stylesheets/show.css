@@ -1,13 +1,38 @@
-.showpage-photo{
+.main-show-details {
+  margin: 0%;
+  display: inline-block;
   text-align: center;
-  margin: 3% 0%;
+  vertical-align: top;
+  margin: 3% 0% 0% 3%;
 }
 
-.showpage-title{
-  text-align: center;
+.main-show-details h1, .main-show-details h3, .main-show-details ul p, .main-show-details button {
+  font-family: 'Teko', sans-serif;
+  margin: 0%;
 }
 
-.showpage-info{
-  margin-left: 4%;
-  margin-bottom: 5%;
+.main-show-details h1 {
+  font-size: 5rem;
+}
+
+.main-show-details h3 {
+  font-size: 3rem;
+}
+
+.main-show-details ul p {
+  font-size: 2rem;
+}
+
+.main-show-details button {
+  font-size: 2rem;
+}
+
+.main-show-reviews {
+  display: inline-block;
+  width: 1500px;
+}
+
+.review-list {
+  overflow-y: scroll;
+  height: 700px
 }
