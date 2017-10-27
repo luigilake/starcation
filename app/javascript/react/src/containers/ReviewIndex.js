@@ -157,6 +157,12 @@ class ReviewIndex extends Component {
       }
       let   upClick = () => { this.voteWasClicked(review.id,  1) }
       let downClick = () => { this.voteWasClicked(review.id, -1) }
+
+      let currentUserVote = 0
+      if (review.current_user_votes.length != 0) {
+        currentUserVote = review.current_user_votes[0].value
+      }
+
         return(
           <ReviewTile
             key={review.id}
@@ -171,6 +177,7 @@ class ReviewIndex extends Component {
             handleClick={handleDeleteReview}
             handleUpClick={upClick}
             handleDownClick={downClick}
+            currentUserVote={currentUserVote}
           />
         )
     })

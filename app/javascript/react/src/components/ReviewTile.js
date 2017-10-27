@@ -6,6 +6,20 @@ const ReviewTile = props => {
     deleteButton = <button onClick={props.handleClick}>Delete Review</button>
   }
 
+  let rating = []
+  for (let i = 0; i < 5; i++) {
+    if (i < props.rating) {
+      rating.push(<span key={i} className="fa fa-star fa-2x checked"></span>);
+    }
+    else {
+      rating.push(<span key={i} className="fa fa-star fa-2x"></span>);
+    }
+  }
+
+  let upvote, downvote
+  if (props.currentUserVote == 1) { upvote = 'upvote' }
+  else if (props.currentUserVote == -1) {downvote = 'downvote'}
+
   return(
     <div className="grid-container review-tile">
       <div className="grid-x">
@@ -14,11 +28,13 @@ const ReviewTile = props => {
         <p className="review-creator">{props.user}</p>
       </div>
       <div className="small-5 cell review-info">
+        {rating}
         <p className="review-body">{props.body}</p>
-        <p className="review-rating">Rating: {props.rating}</p>
-        <p className="review-votes">Votes: {props.votes}</p>
-        <button onClick = {props.handleUpClick}>Upvote</button>
-        <button onClick = {props.handleDownClick}>Downvote</button>
+        <div className='up-down-votes'>
+          <i onClick = {props.handleUpClick} className={"fa fa-space-shuttle fa-2x fa-rotate-270 " + upvote } aria-hidden="true"></i>
+          <span>{props.votes}</span>
+          <i onClick = {props.handleDownClick} className={"fa fa-space-shuttle fa-2x fa-rotate-90 " + downvote } aria-hidden="true"></i>
+        </div>
         {deleteButton}
       </div>
       </div>

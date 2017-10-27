@@ -6,6 +6,12 @@ Starcation is an intergalactic travel review website, where starcationers or int
 
 ---
 
+## Contributors
+* [Luigi Lake](https://github.com/luigilake)
+* [Nate Weeks](https://github.com/Nate-weeks)
+* [Joe Musacchia](https://github.com/joemusacchia)
+* [Randy Morantes](https://github.com/rmorantes)
+
 ![Build Status](https://codeship.com/projects/c9cd1530-94c4-0135-ea79-5e19c06be32c/status?branch=master)
 [![Code Climate](https://api.codeclimate.com/v1/badges/8a2421d69aa747e023f7/maintainability)](https://codeclimate.com/github/luigilake/starcation/maintainability)
 ![Coverage Status](https://coveralls.io/repos/luigilake/starcation/badge.png)
@@ -43,3 +49,8 @@ Starcation is an intergalactic travel review website, where starcationers or int
  * In terminal, run `rails s`
  * In another terminal window, run `./bin/webpacker-dev-server`
  * Visit `http://localhost:3000/` in your browser.
+
+
+ ## Resources
+
+ * [A scalable star rating widget using CSS](http://code.stephenmorley.org/html-and-css/star-rating-widget/)

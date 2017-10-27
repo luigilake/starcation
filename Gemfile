@@ -10,7 +10,7 @@ gem 'devise'
 gem 'carrierwave', '~>1.0'
 gem 'foundation-rails'
 gem 'jquery-rails'
-
+gem "font-awesome-rails"
 gem 'fog'
 
 
