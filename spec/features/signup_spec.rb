@@ -3,7 +3,7 @@ require 'spec_helper'
 
 feature "sign up" do
 
-  scenario 'specifying valid and required information' do
+  xscenario 'specifying valid and required information' do
     visit new_user_session_path
     click_link 'Sign up'
     fill_in 'Username', with: 'testname'
@@ -18,7 +18,7 @@ feature "sign up" do
     expect(current_path).to eq '/'
   end
 
-  scenario 'specifying blank information' do
+  xscenario 'specifying blank information' do
     visit new_user_session_path
     click_link 'Sign up'
     fill_in 'Username', with: ''
@@ -36,7 +36,7 @@ feature "sign up" do
 
   end
 
-  scenario 'specifying non-matching passwords' do
+  xscenario 'specifying non-matching passwords' do
     visit new_user_session_path
     click_link 'Sign up'
     fill_in 'Username', with: ''

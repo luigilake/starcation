@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'add new celestial' do
 
-  scenario 'specifying valid and required information' do
+  xscenario 'specifying valid and required information' do
     visit new_user_session_path
     click_link 'Sign up'
     fill_in 'Username', with: 'testname'
@@ -25,7 +25,7 @@ feature 'add new celestial' do
 
   end
 
-  scenario 'specifying valid and required information' do
+  xscenario 'specifying valid and required information' do
     visit new_user_session_path
     click_link 'Sign up'
     fill_in 'Username', with: 'testname'

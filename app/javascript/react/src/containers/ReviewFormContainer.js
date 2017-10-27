@@ -59,10 +59,10 @@ class ReviewFormContainer extends Component {
       })
     }
     return(
-      <form>
-        <h3>New Review Form</h3>
+      <form className='review-form'>
+        <h3 className='review-form-header'>New Review Form</h3>
+        <ul>{errors}</ul>
         <label>Review:
-          <ul>{errors}</ul>
           <textarea
             name={"reviewBody"}
             value={this.state.reviewBody}
@@ -70,16 +70,21 @@ class ReviewFormContainer extends Component {
             type="text"
           />
         </label>
-        <label>Rating:
-          <select name="rating" value={this.state.rating} onChange={this.handleChange}>
-            <option value={0}> </option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-          </select>
-        </label>
+
+        <span className="starRating" onChange={this.handleChange}>
+        <input id="rating5" type="radio" name="rating" value="5"/>
+        <label htmlFor="rating5">5</label>
+        <input id="rating4" type="radio" name="rating" value="4"/>
+        <label htmlFor="rating4">4</label>
+        <input id="rating3" type="radio" name="rating" value="3"/>
+        <label htmlFor="rating3">3</label>
+        <input id="rating2" type="radio" name="rating" value="2"/>
+        <label htmlFor="rating2">2</label>
+        <input id="rating1" type="radio" name="rating" value="1"/>
+        <label htmlFor="rating1">1</label>
+        </span>
+
+
         <button className="submit-button" type="submit" value="Submit" onClick={this.handleSubmit}>Submit</button>
       </form>
 
