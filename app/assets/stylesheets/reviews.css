@@ -21,19 +21,6 @@
 
 }
 
-form{
-  margin: 2%;
-  width: 40%;
-  border: 3px solid #999DA6;
-  padding: 2%;
-  border-radius: 25px;
-
-}
-
-textarea{
-  max-width: 608px;
-}
-
 .review-body {
   font-family: 'Teko', sans-serif;
   font-size: 1.5rem;

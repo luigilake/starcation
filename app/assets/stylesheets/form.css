@@ -12,6 +12,7 @@ form#review-form{
   width: 100%;
 
 }
+
 form{
   margin: 0 auto;
   width: 100%;
@@ -19,7 +20,6 @@ form{
   padding: 2%;
   border-radius: 10px;
   background-color: white;
-
 }
 
 
