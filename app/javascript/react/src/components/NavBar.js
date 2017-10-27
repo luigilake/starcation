@@ -35,6 +35,7 @@ class NavBar extends Component {
   }
 
   render(){
+    
     let user_signed_in;
     if(!this.state.signed_in){
         user_signed_in = <SignedOutNavbar/>

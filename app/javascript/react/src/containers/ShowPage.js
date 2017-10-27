@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReviewIndex from './ReviewIndex'
+import ReviewIndex from './ReviewIndex';
 
 class ShowPage extends Component{
   constructor(props){
@@ -39,7 +39,6 @@ class ShowPage extends Component{
   }
 
   render() {
-    console.log(this.state)
     let editButton;
     if(this.state.current_user.id == this.state.celestial.user_id || this.state.current_user.admin){
       editButton = <a href={`/celestials/${this.state.celestial.id}/edit`}><button>Edit Celestial</button></a>
@@ -73,4 +72,4 @@ class ShowPage extends Component{
   }
 }
 
-export default ShowPage
+export default ShowPage;

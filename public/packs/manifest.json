@@ -1,5 +1,11 @@
 {
+<<<<<<< HEAD
   "application.js": "/packs/application-d2cfb95a6af677495398.js",
   "hello_react.js": "/packs/hello_react-67a277e52e61457b20cd.js",
   "index.js": "/packs/index-4a6b76bace61c14573e5.js"
+=======
+  "application.js": "/packs/application-4d48499aa14f0ae84263.js",
+  "hello_react.js": "/packs/hello_react-09c25251500e23e02068.js",
+  "index.js": "/packs/index-ff6b529184b48b14dd97.js"
+>>>>>>> master
 }

@@ -59,6 +59,7 @@ class ReviewFormContainer extends Component {
       })
     }
     return(
+<<<<<<< HEAD
       <div className="form-container">
         <form id="review-form">
           <div className="field">
@@ -86,6 +87,36 @@ class ReviewFormContainer extends Component {
           </div>
         </form>
       </div>
+=======
+      <form className='review-form'>
+        <h3 className='review-form-header'>New Review Form</h3>
+        <ul>{errors}</ul>
+        <label>Review:
+          <textarea
+            name={"reviewBody"}
+            value={this.state.reviewBody}
+            onChange={this.handleChange}
+            type="text"
+          />
+        </label>
+
+        <span className="starRating" onChange={this.handleChange}>
+        <input id="rating5" type="radio" name="rating" value="5"/>
+        <label htmlFor="rating5">5</label>
+        <input id="rating4" type="radio" name="rating" value="4"/>
+        <label htmlFor="rating4">4</label>
+        <input id="rating3" type="radio" name="rating" value="3"/>
+        <label htmlFor="rating3">3</label>
+        <input id="rating2" type="radio" name="rating" value="2"/>
+        <label htmlFor="rating2">2</label>
+        <input id="rating1" type="radio" name="rating" value="1"/>
+        <label htmlFor="rating1">1</label>
+        </span>
+
+
+        <button className="submit-button" type="submit" value="Submit" onClick={this.handleSubmit}>Submit</button>
+      </form>
+>>>>>>> master
 
     )
   }

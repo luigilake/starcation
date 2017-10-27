@@ -2,20 +2,23 @@ import React, {Component} from 'react';
 import { Link } from 'react-router';
 import CelestialTile from '../components/CelestialTile'
 import FilterButton from '../components/FilterButton'
+import SearchBar from '../components/SearchBar'
 
-class IndexPage extends Component{
+class IndexPage extends Component {
   constructor(props){
     super(props)
     this.state = {
       celestialsArray: [],
       celestialTypes: ['', 'galaxy', 'constellation', 'star', 'planet', 'satellite', 'comet', 'asteroid', 'other'],
       selected_type: '',
-      user_signed_in: false
+      user_signed_in: false,
+      search: ''
     }
     this.handleChangeDisplay = this.handleChangeDisplay.bind(this);
+    this.handleSearchChange = this.handleSearchChange.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     fetch('/api/v1/celestials.json', {
       credentials: 'same-origin',
       method: 'GET',
@@ -37,35 +40,63 @@ class IndexPage extends Component{
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  handleChangeDisplay(celestial_type){
+  handleChangeDisplay(celestial_type) {
     this.setState({selected_type: celestial_type})
   }
 
-  render() {
-    let celestials = this.state.celestialsArray.map(celestial =>{
-      if(this.state.selected_type == ''){
-        return(
-          <CelestialTile
-            key = {celestial.id}
-            id = {celestial.id}
-            name = {celestial.name}
-            type = {celestial.celestial_type}
-            photo = {celestial.photo}
-          />
-        )
-      } else if (this.state.selected_type == celestial.celestial_type){
-        return(
-          <CelestialTile
-            key = {celestial.id}
-            id = {celestial.id}
-            name = {celestial.name}
-            type = {celestial.celestial_type}
-            photo = {celestial.photo}
-          />
-        )
-      }
-    })
+  handleSearchChange(event) {
+    this.setState({search: event.target.value})
+  }
 
+
+
+  render() {
+    let celestials;
+    if (this.state.search !== '') {
+      celestials = this.state.celestialsArray.filter(celestial => {
+          return celestial.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+        })
+
+      celestials = celestials.map(celestial => {
+        return(
+          <CelestialTile
+            key = {celestial.id}
+            id = {celestial.id}
+            name = {celestial.name}
+            type = {celestial.celestial_type}
+            photo = {celestial.photo}
+          />
+        )
+      })
+    }
+
+    else {
+      celestials = this.state.celestialsArray.map(celestial => {
+        if(this.state.selected_type == '') {
+          return(
+            <CelestialTile
+              key = {celestial.id}
+              id = {celestial.id}
+              name = {celestial.name}
+              type = {celestial.celestial_type}
+              photo = {celestial.photo}
+            />
+          )
+        }
+
+        else if (this.state.selected_type == celestial.celestial_type) {
+          return(
+            <CelestialTile
+              key = {celestial.id}
+              id = {celestial.id}
+              name = {celestial.name}
+              type = {celestial.celestial_type}
+              photo = {celestial.photo}
+            />
+          )
+        }
+      })
+    }
     let filterButtons = this.state.celestialTypes.map(type => {
       let handleClick = () => {
         this.handleChangeDisplay(type)
@@ -84,17 +115,22 @@ class IndexPage extends Component{
         newCelestialButton = <a  href = '/celestials/new'><button id="add-celestial">Add a new celestial</button></a>
       }
 
-
     return (
       <div>
-      <div className="grid-container filter-button-menu">
-        <div className="grid-x filter-button-menu">
-          {filterButtons}
+        <div className="grid-container filter-button-menu">
+          <div className="grid-x filter-button-menu">
+            {filterButtons}
+          </div>
         </div>
-      </div>
-      {newCelestialButton}
+        {newCelestialButton}
         <div id="title">
         StarCation
+        </div>
+        <div className="searchbar">
+          <SearchBar
+            value = {this.state.search}
+            handleSearchChange = {this.handleSearchChange}
+          />
         </div>
         <div className="grid-container celestial-list">
           <div className="grid-x">

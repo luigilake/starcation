@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Teko');
+
 .user-review-image{
   display: inline-block;
   vertical-align: top;
@@ -7,14 +9,39 @@
 
 .review-info{
   display: inline-block;
+  border-bottom-style: solid;
+  border-color: #999DA5;
+  padding-bottom: 0.5em
 }
 
 .user-photo{
   height: 90px;
   width: 90px;
   vertical-align: middle;
+
 }
 
+<<<<<<< HEAD
+=======
+form{
+  margin: 2%;
+  width: 40%;
+  border: 3px solid #999DA6;
+  padding: 2%;
+  border-radius: 25px;
+
+}
+
+textarea{
+  max-width: 608px;
+}
+
+.review-body {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5rem;
+}
+
+>>>>>>> master
 .submit-button{
   color: white;
 }
@@ -23,6 +50,100 @@
   margin-left: 4%;
 }
 
+.review-rating {
+  font-weight: bold;
+}
+
+.review-votes{
+  font-weight: bold;
+}
+
 .user-tile{
   margin: 5%;
+}
+
+.review-tile{
+  margin-top: 2em;
+}
+
+.review-creator {
+  margin-left: 0.4em;
+}
+
+.review-form {
+  margin-left: 9em;
+  width: 41.5%;
+  background-color: #639598;
+  border-color: #639598;
+}
+
+.review-form-header {
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+}
+
+.review-form label, textarea {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5rem;
+}
+
+.checked {
+  color: orange;
+}
+
+.upvote {
+  color: green;
+}
+
+.downvote {
+  color: red;
+}
+
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+.submit-button {
+  margin-top: 1em;
+  display: inline-block;
+  margin-bottom: -1em;
+  margin-left: 4.59em;
+}
+
+
+{/* http://code.stephenmorley.org/html-and-css/star-rating-widget/#html */}
+.starRating:not(old){
+  display        : inline-block;
+  width          : 19em;
+  height         : 2.2em;
+  margin-left    : 4em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Five_Pointed_Star_Solid.svg');
+  background-size : contain;
+}
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/768px-Gold_Star.svg.png');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
 }

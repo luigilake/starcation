@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Teko');
 
 body {
-  background-color: #E3E3E3;
+  background: url("ferdinand-stohr-149422.jpg");
 }
 
 .add-destination{
@@ -109,4 +109,16 @@ a {
 .celestial-info p {
   font-size: 2rem;
   margin-bottom: 0%;
+}
+
+.searchbar {
+  width: 50%;
+  margin: 0 auto;
+  height: 6rem;
+}
+
+input#search-field {
+  height: 4rem;
+  margin-top: 1rem;
+  font-size: 150%;
 }
