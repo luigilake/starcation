@@ -97,8 +97,6 @@ textarea {
   margin-left: 4.59em;
 }
 
-
-{/* http://code.stephenmorley.org/html-and-css/star-rating-widget/#html */}
 .starRating:not(old){
   display        : inline-block;
   width          : 19em;
